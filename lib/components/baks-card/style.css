@@ -1,0 +1,6 @@
+@import url('../../app.css');
+
+.bk-primary {
+  @apply border-2;
+  border-color: brightness(0.95);
+}
