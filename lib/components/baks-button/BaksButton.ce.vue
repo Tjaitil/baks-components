@@ -19,29 +19,14 @@ interface Props {
 const props = defineProps<Props>();
 
 const emit = defineEmits<{
-  'click:bk-button': [];
+  'bk-button:button': [];
 }>();
 
 const handle = () => {
-  emit('click:bk-button');
+  emit('bk-button:button');
 };
 </script>
 
 <style>
 @import url('./style.css');
-
-.bk-button {
-  font-size: 16px;
-  cursor: pointer;
-  @apply text-white;
-  @apply px-6;
-  @apply py-1.5;
-  transition: filter 0.2s ease-out;
-  min-width: 100px;
-  @apply shadow;
-  @apply shadow-black;
-}
-.bk-button:hover {
-  @apply brightness-105;
-}
 </style>

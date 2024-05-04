@@ -3,14 +3,14 @@
 .bk-button {
   font-size: 16px;
   cursor: pointer;
-  @apply text-white;
   @apply px-6;
   @apply py-1.5;
   transition: filter 0.2s ease-out;
   min-width: 100px;
-  @apply shadow;
-  @apply shadow-black;
+  @apply border-2;
+  @apply border-transparent;
+  @apply rounded;
 }
 .bk-button:hover {
-  @apply brightness-105;
+  @apply brightness-110;
 }
