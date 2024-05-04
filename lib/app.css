@@ -4,22 +4,54 @@
 
 :host {
   --primary-color: theme(colors.sky.500);
-  --secondary-color: theme(colors.emerald.500);
+  --secondary-color: theme(colors.orange.600);
   --dark-color: theme(colors.gray.700);
-  --text-color: theme(colors.white);
+  --light-color: theme(colors.gray.200);
+  --success-color: theme(colors.green.600);
+  --error-color: theme(colors.red.500);
+  --info-color: theme(colors.blue.500);
+  --warning-color: theme(colors.yellow.500);
+  --info-color: theme(colors.blue.200);
+  --light-text-color: theme(colors.white);
+  --dark-text-color: theme(colors.gray.800);
 }
 
 .bk-primary {
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--light-text-color);
 }
 
 .bk-secondary {
   background-color: var(--secondary-color);
-  color: var(--text-color);
+  color: var(--light-text-color);
 }
 
 .bk-dark {
   background-color: var(--dark-color);
-  color: var(--text-color);
+  color: var(--light-text-color);
+}
+
+.bk-light {
+  background-color: var(--light-text);
+  color: var(--dark-text-color);
+}
+
+.bk-success {
+  background-color: var(--success-color);
+  color: var(--light-text-color);
+}
+
+.bk-error {
+  background-color: var(--error-color);
+  color: var(--light-text-color);
+}
+
+.bk-warning {
+  background-color: var(--warning-color);
+  color: var(--light-text-color);
+}
+
+.bk-info {
+  background-color: var(--info-color);
+  color: var(--dark-text-color);
 }
