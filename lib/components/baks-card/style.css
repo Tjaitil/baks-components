@@ -2,5 +2,8 @@
 
 .bk-primary {
   @apply border-2;
-  border-color: brightness(0.95);
+  @apply border-transparent;
+  @apply shadow-md;
+  @apply shadow;
+  @apply shadow-black;
 }
