@@ -3,7 +3,7 @@
     @click="handle"
     part="button"
     class="bk-button"
-    :class="[resolveVariant(variant, 'button'),{ 'w-full': size === 'block', 'disabled': disabled}]"
+    :class="[resolveVariant(variant, 'button'),{ 'w-full': size === 'block', 'disabled': disabled !== undefined}]"
   >
     <slot></slot>
   </button>
@@ -12,15 +12,16 @@
 <script setup lang="ts">
 import type { ThemeVariant } from '@/types/ThemeVariants';
 import { resolveVariant } from '@/utilities/variants';
+
 interface Props {
   variant: ThemeVariant;
   size: 'normal' | 'block';
-  disabled: boolean;
+  // This is string because web components doesn't support boolean props
+  disabled?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 'normal',
-  disabled: false,
 });
 
 const emit = defineEmits<{

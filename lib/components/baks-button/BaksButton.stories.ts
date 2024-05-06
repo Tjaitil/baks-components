@@ -10,6 +10,13 @@ const meta: Meta = {
     variant: {
       options: variants,
       control: { type: 'select' }
+    },
+    disabled: {
+      control: { type: 'boolean' }
+    },
+    size: {
+      options: ['normal', 'block'],
+      control: { type: 'select' }
     }
   }
 };
@@ -19,9 +26,25 @@ type Story = StoryObj;
 
 register(['BaksButton']);
 
-export const Primary: Story = {
+export const Normal: Story = {
   args: {
-    variant: 'primary'
+    variant: 'primary',
+    disabled: false,
+    size: 'normal'
   },
-  render: ({ variant }) => html` <baks-button variant="${variant}">Hello</baks-button>`
+  render: ({ variant, disabled, size }) => {
+    return html`<baks-button variant="${variant} size="${size}">Hello</baks-button>`
+  }
 };
+
+export const Disabled: Story = {
+  args: {
+    variant: 'primary',
+    disabled: true,
+    size: 'normal'
+  },
+  render: ({ variant, disabled, size }) => {
+    return html`<baks-button variant="${variant} size="${size}" disabled='true'>Hello</baks-button>`
+}
+};
+
