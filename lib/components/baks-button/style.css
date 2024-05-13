@@ -7,8 +7,6 @@
   @apply py-1.5;
   transition: filter 0.2s ease-out;
   min-width: 100px;
-  @apply border-2;
-  @apply border-transparent;
   @apply rounded;
 }
 .bk-button:hover:not(.disabled) {

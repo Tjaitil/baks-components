@@ -15,7 +15,7 @@ import { resolveVariant } from '@/utilities/variants';
 
 interface Props {
   variant: ThemeVariant;
-  size: 'normal' | 'block';
+  size?: 'normal' | 'block';
   // This is string because web components doesn't support boolean props
   disabled?: string;
 }
