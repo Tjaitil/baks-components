@@ -2,56 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
-:host {
-  --primary-color: theme(colors.sky.500);
-  --secondary-color: theme(colors.orange.600);
-  --dark-color: theme(colors.gray.700);
-  --light-color: theme(colors.gray.200);
-  --success-color: theme(colors.green.600);
-  --error-color: theme(colors.red.500);
-  --info-color: theme(colors.blue.500);
-  --warning-color: theme(colors.yellow.500);
-  --info-color: theme(colors.blue.200);
-  --light-text-color: theme(colors.white);
-  --dark-text-color: theme(colors.gray.800);
+@layer base {
+  :host {
+    --base-light-text-color: theme(colors.gray.50);
+    --base-dark-text-color: '#1f2937';
+
+    --primary-color: theme(colors.sky.500);
+    --primary-color-focus: theme(colors.sky.400);
+    --primary-color-border: theme(colors.sky.600);
+    --primary-color-text: var(--base-light-text-color);
+
+    --secondary-color: theme(colors.orange.600);
+    --secondary-color-focus: theme(colors.orange.500);
+    --secondary-color-border: theme(colors.orange.700);
+    --secondary-color-text: var(--base-light-text-color);
+
+    --dark-color: theme(colors.gray.600);
+    --dark-color-focus: theme(colors.gray.500);
+    --dark-color-border: theme(colors.gray.700);
+    --dark-color-text: var(--base-light-text-color);
+
+    --light-color: theme(colors.gray.200);
+    --light-color-focus: theme(colors.gray.100);
+    --light-color-border: theme(colors.gray.300);
+    --light-color-text: var(--base-dark-text-color);
+
+    --success-color: theme(colors.green.600);
+    --success-color-focus: theme(colors.green.500);
+    --success-color-border: theme(colors.green.700);
+    --success-color-text: var(--base-light-text-color);
+
+    --error-color: theme(colors.red.600);
+    --error-color-focus: theme(colors.red.500);
+    --error-color-border: theme(colors.red.700);
+    --error-color-text: var(--base-light-text-color);
+
+    --info-color: theme(colors.blue.500);
+    --info-color-focus: theme(colors.blue.400);
+    --info-color-border: theme(colors.blue.600);
+    --info-color-text: var(--base-light-text-color);
+
+    --warning-color: theme(colors.yellow.500);
+    --warning-color-focus: theme(colors.yellow.400);
+    --warning-color-border: theme(colors.yellow.600);
+    --warning-color-text: var(--base-dark-text-color);
+  }
+}
+.bk-primary,
+.bk-secondary,
+.bk-dark,
+.bk-light,
+.bk-success,
+.bk-error,
+.bk-warning,
+.bk-info {
+  font-family: sans-serif;
+  @apply border-2;
 }
 
 .bk-primary {
   background-color: var(--primary-color);
-  color: var(--light-text-color);
+  color: var(--primary-color-text);
+  border-color: var(--primary-color-border);
 }
 
 .bk-secondary {
   background-color: var(--secondary-color);
-  color: var(--light-text-color);
+  color: var(--secondary-color-text);
+  border-color: var(--secondary-color-border);
 }
 
 .bk-dark {
   background-color: var(--dark-color);
-  color: var(--light-text-color);
+  color: var(--dark-color-text);
+  border-color: var(--dark-color-border);
 }
 
 .bk-light {
-  background-color: var(--light-text);
-  color: var(--dark-text-color);
+  background-color: var(--light-color);
+  color: var(--light-color-text);
+  border-color: var(--light-color-border);
 }
 
 .bk-success {
   background-color: var(--success-color);
-  color: var(--light-text-color);
+  color: var(--success-color-text);
+  border-color: var(--success-color-border);
 }
 
 .bk-error {
   background-color: var(--error-color);
-  color: var(--light-text-color);
+  color: var(--error-color-text);
+  border-color: var(--error-color-border);
 }
 
 .bk-warning {
   background-color: var(--warning-color);
-  color: var(--light-text-color);
+  color: var(--warning-color-text);
+  border-color: var(--warning-color-border);
 }
 
 .bk-info {
   background-color: var(--info-color);
-  color: var(--dark-text-color);
+  color: var(--info-color-text);
+  border-color: var(--info-color-border);
 }
