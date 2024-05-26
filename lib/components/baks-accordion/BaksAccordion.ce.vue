@@ -9,7 +9,7 @@
         :id="accordionId"
         type="button"
         :aria-expanded="isExpanded"
-        class="accordion-trigger block w-full p-3"
+        class="accordion-trigger block w-full p-4"
         :aria-controls="accordionContentId"
       >
         <div class="flex flex-row items-center gap-2">
@@ -30,7 +30,7 @@
       :style="{ height: `${height}px` }"
       ref="contentWrapper"
     >
-      <div class="p-3">
+      <div class="p-4">
         <slot name="content"></slot>
       </div>
     </div>
