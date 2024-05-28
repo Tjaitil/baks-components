@@ -1,6 +1,6 @@
 import type { ThemeVariant } from '@/types/ThemeVariants';
 
-export function resolveVariant(variant: ThemeVariant = 'primary', element: string) {
+export function resolveVariant(variant: ThemeVariant = 'primary'): string {
   return `bk-${variant}`;
 }
 
