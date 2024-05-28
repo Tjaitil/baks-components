@@ -2,7 +2,7 @@
   <div
     part="baks-card"
     class="relative p-4 rounded border-default shadow shadow-black"
-    :class="resolveVariant(variant, 'card')"
+    :class="resolveVariant(variant)"
   >
     <slot></slot>
   </div>
