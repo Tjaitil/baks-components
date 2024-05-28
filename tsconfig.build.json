@@ -3,9 +3,10 @@
     "outDir": "dist",
     "declaration": true,
     "emitDeclarationOnly": true,
+    "downlevelIteration": true,
     "paths": {
       "@/*": ["./lib/*"]
-    },
+    }
   },
-  "include": ["lib/main.ts"]
+  "include": ["lib/**/*", "lib/**/*.vue", "lib/**/*.ce.vue"]
 }
