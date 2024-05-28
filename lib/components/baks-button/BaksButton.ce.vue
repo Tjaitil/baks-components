@@ -1,9 +1,9 @@
 <template>
   <button
     @click="handle"
-    part="button"
-    class="bk-button"
-    :class="[resolveVariant(variant, 'button'), { 'w-full': size === 'block', disabled: disabled }]"
+    part="bk-button"
+    class="bk-button hover"
+    :class="[resolveVariant(variant), { 'w-full': size === 'block', disabled: disabled }]"
   >
     <slot></slot>
   </button>

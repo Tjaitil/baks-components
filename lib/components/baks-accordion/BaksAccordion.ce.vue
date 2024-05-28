@@ -1,6 +1,6 @@
 <template>
-  <div class="bk-accordion" :class="[resolveVariant(variant, 'accordion')]">
-    <div class="bk-accordion-header bk-info-border">
+  <div class="bk-accordion" :class="[resolveVariant(variant)]" part="bk-accordion">
+    <div class="bk-accordion-header" part="bk-accordion-header">
       <button
         @click="toggleIsOpen"
         @keydown="handleKeyDown"
@@ -9,7 +9,7 @@
         :id="accordionId"
         type="button"
         :aria-expanded="isExpanded"
-        class="accordion-trigger block w-full p-4"
+        class="accordion-trigger block w-full p-4 focus"
         :aria-controls="accordionContentId"
       >
         <div class="flex flex-row items-center gap-2">
@@ -29,8 +29,9 @@
       :aria-labelledby="accordionId"
       :style="{ height: `${height}px` }"
       ref="contentWrapper"
+      part="bk-accordion-content"
     >
-      <div class="p-4">
+      <div class="p-4" part="bk-accordion-content-inner">
         <slot name="content"></slot>
       </div>
     </div>

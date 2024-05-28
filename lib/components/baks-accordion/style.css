@@ -8,31 +8,6 @@
 .bk-accordion-header {
   @apply cursor-pointer;
 }
-.bk-info .accordion-trigger:focus {
-  background-color: var(--info-color-focus);
-}
-.bk-primary .accordion-trigger:focus {
-  background-color: var(--primary-color-focus);
-}
-.bk-light .accordion-trigger:focus {
-  background-color: var(--light-color-focus);
-}
-.bk-dark .accordion-trigger:focus {
-  background-color: var(--dark-color-focus);
-}
-.bk-secondary .accordion-trigger:focus {
-  background-color: var(--secondary-color-focus);
-}
-.bk-success .accordion-trigger:focus {
-  background-color: var(--success-color-focus);
-}
-.bk-error .accordion-trigger:focus {
-  background-color: var(--error-color-focus);
-}
-.bk-warning .accordion-trigger:focus {
-  background-color: var(--warning-color-focus);
-}
-
 .bk-dark,
 .bk-error,
 .bk-secondary,
@@ -48,6 +23,9 @@
   @apply overflow-y-hidden;
   border-top: -2px solid var(--light-color-border);
   transition: all 0.3s ease-out;
+}
+.bk-accordion-content-inner {
+  @apply p-4;
 }
 .chevron-down {
   transition: all 0.3s ease-out;
