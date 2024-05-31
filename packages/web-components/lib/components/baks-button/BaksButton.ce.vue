@@ -1,17 +1,13 @@
 <template>
-  <button
-    @click="handle"
-    part="bk-button"
-    class="bk-button hover"
-    :class="[resolveVariant(variant), { 'w-full': size === 'block', disabled: disabled }]"
-  >
+  <BaksButton :variant :size :disabled @click="handle">
+    hello
     <slot></slot>
-  </button>
+  </BaksButton>
 </template>
 
 <script setup lang="ts">
 import type { ThemeVariant } from '@/types/ThemeVariants';
-import { resolveVariant } from '@/utilities/variants';
+import BaksButton from '@baks-components/vue/lib/components/baks-button/BaksButton.vue';
 
 interface Props {
   variant: ThemeVariant;
