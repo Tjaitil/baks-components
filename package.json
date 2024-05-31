@@ -7,8 +7,7 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "",
   "license": "MIT"
 }
