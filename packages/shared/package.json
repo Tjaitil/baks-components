@@ -1,0 +1,9 @@
+{
+  "name": "@baks-components/shared",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Internal repo with shared functionality",
+  "main": "index.ts",
+  "author": "Kjetil Baksaas",
+  "license": "MIT"
+}
