@@ -4,9 +4,10 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "downlevelIteration": true,
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./lib/*"]
+      "@baks/*": ["packages/*"]
     }
   },
-  "include": ["lib/**/*", "lib/**/*.vue", "lib/**/*.ce.vue"]
+  "include": ["packages/*/lib"]
 }

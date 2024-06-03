@@ -1,27 +1,29 @@
 import { fileURLToPath, URL } from 'node:url';
 import { resolve } from 'path';
-import { defineConfig } from 'vite';
+import { defineConfig, mergeConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import rootConfig from '../../vite.config';
 
 // https://vitejs.dev/config/
-export default defineConfig({
+
+export default mergeConfig(rootConfig, defineConfig({
   define: {
     'process.env': {}
   },
   plugins: [
     vue({
       customElement: true
-    }),
+    })
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./lib', import.meta.url))
+      '@/': fileURLToPath(new URL('./', import.meta.url))
     }
   },
   build: {
     copyPublicDir: false,
     lib: {
-      entry: resolve(__dirname, 'lib/main.ts'),
+      entry: resolve('lib/index.ts'),
       formats: ['es']
     },
     rollupOptions: {
@@ -36,4 +38,4 @@ export default defineConfig({
       }
     }
   }
-});
+}));
