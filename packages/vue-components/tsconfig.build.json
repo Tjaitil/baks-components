@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "outDir": "dist",
+      "declaration": true,
+      "emitDeclarationOnly": true,
+      "downlevelIteration": true,
+      "paths": {
+        "@/*": ["./lib/*"]
+      }
+    },
+    "include": ["lib/**/*", "lib/**/*.vue", "lib/**/*.ce.vue"]
+  }
