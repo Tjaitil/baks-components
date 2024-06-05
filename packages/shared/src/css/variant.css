@@ -1,0 +1,238 @@
+@layer base {
+    :host,
+    :root {
+      --base-light-text-color: theme(colors.gray.50);
+      --base-dark-text-color: '#1f2937';
+  
+      --primary-color: theme(colors.sky.500);
+      --primary-color-hover: theme(colors.sky.600);
+      --primary-color-focus: theme(colors.sky.600);
+      --primary-color-active: theme(colors.sky.600);
+      --primary-color-border: theme(colors.sky.600);
+      --primary-color-text: var(--base-light-text-color);
+  
+      --secondary-color: theme(colors.orange.600);
+      --secondary-color-hover: theme(colors.orange.700);
+      --secondary-color-focus: theme(colors.orange.700);
+      --secondary-color-active: theme(colors.orange.700);
+      --secondary-color-border: theme(colors.orange.700);
+      --secondary-color-text: var(--base-light-text-color);
+  
+      --dark-color: theme(colors.gray.600);
+      --dark-color-hover: theme(colors.gray.700);
+      --dark-color-focus: theme(colors.gray.700);
+      --dark-color-active: theme(colors.gray.700);
+      --dark-color-border: theme(colors.gray.700);
+      --dark-color-text: var(--base-light-text-color);
+  
+      --light-color: theme(colors.gray.200);
+      --light-color-hover: theme(colors.gray.300);
+      --light-color-focus: theme(colors.gray.300);
+      --light-color-active: theme(colors.gray.300);
+      --light-color-border: theme(colors.gray.300);
+      --light-color-text: var(--base-dark-text-color);
+  
+      --success-color: theme(colors.green.600);
+      --success-color-hover: theme(colors.green.700);
+      --success-color-focus: theme(colors.green.700);
+      --success-color-active: theme(colors.green.700);
+      --success-color-border: theme(colors.green.700);
+      --success-color-text: var(--base-light-text-color);
+  
+      --error-color: theme(colors.red.600);
+      --error-color-hover: theme(colors.red.700);
+      --error-color-focus: theme(colors.red.700);
+      --error-color-active: theme(colors.red.700);
+      --error-color-border: theme(colors.red.700);
+      --error-color-text: var(--base-light-text-color);
+  
+      --info-color: theme(colors.blue.500);
+      --info-color-hover: theme(colors.blue.600);
+      --info-color-focus: theme(colors.blue.600);
+      --info-color-active: theme(colors.blue.600);
+      --info-color-border: theme(colors.blue.600);
+      --info-color-text: var(--base-light-text-color);
+  
+      --warning-color: theme(colors.yellow.500);
+      --warning-color-hover: theme(colors.yellow.600);
+      --warning-color-focus: theme(colors.yellow.600);
+      --warning-color-active: theme(colors.yellow.600);
+      --warning-color-border: theme(colors.yellow.600);
+      --warning-color-text: var(--base-dark-text-color);
+    }
+  }
+  .bk-primary,
+  .bk-secondary,
+  .bk-dark,
+  .bk-light,
+  .bk-success,
+  .bk-error,
+  .bk-warning,
+  .bk-info {
+    font-family: sans-serif;
+    @apply border-2;
+  }
+  
+  .bk-primary {
+    background-color: var(--primary-color);
+    color: var(--primary-color-text);
+    border-color: var(--primary-color-border);
+  }
+  
+  .bk-secondary {
+    background-color: var(--secondary-color);
+    color: var(--secondary-color-text);
+    border-color: var(--secondary-color-border);
+  }
+  
+  .bk-dark {
+    background-color: var(--dark-color);
+    color: var(--dark-color-text);
+    border-color: var(--dark-color-border);
+  }
+  
+  .bk-light {
+    background-color: var(--light-color);
+    color: var(--light-color-text);
+    border-color: var(--light-color-border);
+  }
+  
+  .bk-success {
+    background-color: var(--success-color);
+    color: var(--success-color-text);
+    border-color: var(--success-color-border);
+  }
+  
+  .bk-error {
+    background-color: var(--error-color);
+    color: var(--error-color-text);
+    border-color: var(--error-color-border);
+  }
+  
+  .bk-warning {
+    background-color: var(--warning-color);
+    color: var(--warning-color-text);
+    border-color: var(--warning-color-border);
+  }
+  
+  .bk-info {
+    background-color: var(--info-color);
+    color: var(--info-color-text);
+    border-color: var(--info-color-border);
+  }
+  
+  .bk-primary.hover:hover:not(.disabled),
+  .bk-primary .hover:hover:not(.disabled) {
+    background-color: var(--primary-color-hover);
+  }
+  .bk-secondary.hover:hover:not(.disabled),
+  .bk-secondary .hover:hover:not(.disabled) {
+    background-color: var(--secondary-color-hover);
+  }
+  .bk-dark.hover:hover:not(.disabled),
+  .bk-dark .hover:hover:not(.disabled) {
+    background-color: var(--dark-color-hover);
+  }
+  .bk-light.hover:hover:not(.disabled),
+  .bk-light .hover:hover:not(.disabled) {
+    background-color: var(--light-color-hover);
+  }
+  .bk-success.hover:hover:not(.disabled),
+  .bk-success .hover:hover:not(.disabled) {
+    background-color: var(--success-color-hover);
+  }
+  .bk-error.hover:hover:not(.disabled),
+  .bk-error .hover:hover:not(.disabled) {
+    background-color: var(--error-color-hover);
+  }
+  .bk-warning.hover:hover:not(.disabled),
+  .bk-warning .hover:hover:not(.disabled) {
+    background-color: var(--warning-color-hover);
+  }
+  .bk-info.hover:hover:not(.disabled),
+  .bk-info .hover:hover:not(.disabled) {
+    background-color: var(--info-color-hover);
+  }
+  
+  .bk-primary.active:active,
+  .bk-primary .active:active,
+  .bk-primary.is-selected,
+  .bk-primary .is-selected {
+    background-color: var(--primary-color-active);
+  }
+  .bk-secondary.active:active,
+  .bk-secondary .active:active,
+  .bk-secondary.is-selected,
+  .bk-secondary .is-selected {
+    background-color: var(--secondary-color-active);
+  }
+  .bk-dark.active:active,
+  .bk-dark .active:active,
+  .bk-dark.is-selected,
+  .bk-dark .is-selected {
+    background-color: var(--dark-color-active);
+  }
+  .bk-light.active:active,
+  .bk-light .active:active,
+  .bk-light.is-selected,
+  .bk-light .is-selected {
+    background-color: var(--light-color-active);
+  }
+  .bk-success.active:active,
+  .bk-success .active:active,
+  .bk-success.is-selected,
+  .bk-success .is-selected {
+    background-color: var(--success-color-active);
+  }
+  .bk-error.active:active,
+  .bk-error .active:active,
+  .bk-error.is-selected,
+  .bk-error .is-selected {
+    background-color: var(--error-color-active);
+  }
+  .bk-warning.active:active,
+  .bk-warning .active:active,
+  .bk-warning.is-selected,
+  .bk-warning .is-selected {
+    background-color: var(--warning-color-active);
+  }
+  .bk-info.active:active,
+  .bk-info .active:active,
+  .bk-info.is-selected,
+  .bk-info .is-selected {
+    background-color: var(--info-color-active);
+  }
+  
+  .bk-primary.focus:focus,
+  .bk-primary .focus:focus {
+    background-color: var(--primary-color-focus);
+  }
+  .bk-secondary.focus:focus,
+  .bk-secondary .focus:focus {
+    background-color: var(--secondary-color-focus);
+  }
+  .bk-dark.focus:focus,
+  .bk-dark .focus:focus {
+    background-color: var(--dark-color-focus);
+  }
+  .bk-light.focus:focus,
+  .bk-light .focus:focus {
+    background-color: var(--light-color-focus);
+  }
+  .bk-success.focus:focus,
+  .bk-success .focus:focus {
+    background-color: var(--success-color-focus);
+  }
+  .bk-error.focus:focus,
+  .bk-error .focus:focus {
+    background-color: var(--error-color-focus);
+  }
+  .bk-warning.focus:focus,
+  .bk-warning .focus:focus {
+    background-color: var(--warning-color-focus);
+  }
+  .bk-info.focus:focus,
+  .bk-info .focus:focus {
+    background-color: var(--info-color-focus);
+  }
+  
