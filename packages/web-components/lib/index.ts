@@ -4,7 +4,7 @@ import './app.css';
 import { registerComponent } from './utilities/registerComponent';
 import BaksCardCe from './components/baks-card/BaksCard.ce.vue';
 import BaksAccordionCe from './components/baks-accordion/BaksAccordion.ce.vue';
-export type { ThemeVariant as ThemeVariants } from './types/ThemeVariants';
+export type { ThemeVariant as ThemeVariants } from '@baks-components/shared';
 
 const BaksCard = defineCustomElement(BaksCardCe);
 const BaksButton = defineCustomElement(BaksButtonCe);
@@ -13,11 +13,7 @@ const BaksAccordion = defineCustomElement(BaksAccordionCe);
 // const BaksTabListW = defineCustomElement(BaksTabListCe);
 // const BaksTabPanel = defineCustomElement(BaksTabPanelCe);
 
-export {
-  BaksCardCe as BaksCard,
-  BaksButtonCe as BaksButton,
-  BaksAccordionCe as BaksAccordion,
-};
+export { BaksCardCe as BaksCard, BaksButtonCe as BaksButtonV, BaksAccordionCe as BaksAccordion };
 
 export type Components =
   | 'BaksButton'
@@ -28,6 +24,7 @@ export type Components =
   | 'BaksTabPanel';
 
 export function register(specificComponents: Components[] = []) {
+  console.log(specificComponents);
   if (specificComponents.length === 0) {
     registerComponent('baks-button', BaksButton);
     registerComponent('baks-card', BaksCard);

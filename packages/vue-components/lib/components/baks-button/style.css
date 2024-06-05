@@ -1,0 +1,16 @@
+@import url('../../app.css');
+
+.bk-button {
+  font-size: 16px;
+  cursor: pointer;
+  @apply px-6;
+  @apply py-1.5;
+  transition: filter 0.2s ease-out;
+  min-width: 100px;
+  @apply rounded;
+}
+
+.bk-button.disabled {
+  @apply opacity-70;
+  cursor: initial;
+}
