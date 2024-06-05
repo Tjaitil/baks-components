@@ -8,9 +8,5 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "baseUrl": ".",
     "types": ["vite/client"],
-    "paths": {
-      "@baks/*": ["packages/*"],
-      "@test/*": ["packages/*"]
-    }
   }
 }
