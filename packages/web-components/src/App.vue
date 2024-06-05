@@ -80,15 +80,10 @@
     <baks-tab-panel id="hei3" :is-visible="isTabSelected('hei3')" variant="light"
       >Hello3</baks-tab-panel
     > -->
-  </div>
+    </div>
   </div>
 </template>
 
-<script lang="ts" setup>
-import { useBaksTabs } from '@/composables/useBaksTabs';
-
-const tabs = ['hei1', 'hei2', 'hei3', 'hei4'] as const;
-const { isTabSelected, handleTabClick } = useBaksTabs(tabs, 'hei1');
-</script>
+<script lang="ts" setup></script>
 
 <style lang="scss" scoped></style>

@@ -1,12 +1,12 @@
 <template>
-  <BaksButton :variant :size :disabled @click="handle">
+  <BaksButton :variant :size :disabled @bk-button:click="$emit('bk-button:click')">
     hello
     <slot></slot>
   </BaksButton>
 </template>
 
 <script setup lang="ts">
-import type { ThemeVariant } from '@/types/ThemeVariants';
+import type { ThemeVariant } from '@baks-components/shared';
 import BaksButton from '@baks-components/vue/lib/components/baks-button/BaksButton.vue';
 
 interface Props {
@@ -19,14 +19,6 @@ const props = withDefaults(defineProps<Props>(), {
   size: 'normal',
   disabled: false
 });
-
-const emit = defineEmits<{
-  'bk-button:click': [];
-}>();
-
-const handle = () => {
-  emit('bk-button:click');
-};
 </script>
 
 <style>

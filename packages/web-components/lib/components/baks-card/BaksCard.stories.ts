@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
-import { register } from '@/main';
+import { register } from '../../';
 
 import { html } from 'lit';
-import { variants } from '@/utilities';
+import { variantsOptions } from '@baks-components/shared';
 
 const meta: Meta = {
   component: 'baks-card',
   argTypes: {
     variant: {
-      options: variants,
+      options: variantsOptions,
       control: { type: 'select' }
     }
   }

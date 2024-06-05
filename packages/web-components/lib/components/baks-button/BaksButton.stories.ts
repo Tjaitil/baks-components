@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
-import { register } from '@/main';
+import { register } from '../../';
 
 import { html } from 'lit';
-import { variants } from '@/utilities';
+import { variantsOptions } from '@baks-components/shared';
 
 const meta: Meta = {
   component: 'baks-button',
   argTypes: {
     variant: {
-      options: variants,
+      options: variantsOptions,
       control: { type: 'select' }
     },
     disabled: {
@@ -33,7 +33,7 @@ export const Normal: Story = {
     size: 'normal'
   },
   render: ({ variant, disabled, size }) => {
-    return html`<baks-button variant="${variant} size="${size}">Hello</baks-button>`
+    return html`<baks-button variant="${variant} size="${size}">Hello</baks-button>`;
   }
 };
 
@@ -44,7 +44,6 @@ export const Disabled: Story = {
     size: 'normal'
   },
   render: ({ variant, disabled, size }) => {
-    return html`<baks-button variant="${variant} size="${size}" disabled='true'>Hello</baks-button>`
-}
+    return html`<baks-button variant="${variant} size="${size}" disabled='true'>Hello</baks-button>`;
+  }
 };
-
