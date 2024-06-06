@@ -5,5 +5,6 @@
   "description": "Internal repo with shared functionality",
   "main": "index.ts",
   "author": "Kjetil Baksaas",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {}
 }
