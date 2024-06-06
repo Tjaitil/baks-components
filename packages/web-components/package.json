@@ -20,8 +20,7 @@
     "format": "prettier --write src/",
     "build:css": "postcss -r bundle.js",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "publish": "npm run build-only && npm run types"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@storybook/web-components-vite": "^8.0.9",
