@@ -1,9 +1,1 @@
 @import url('../../app.css');
-
-.bk-primary {
-  @apply border-2;
-  @apply border-transparent;
-  @apply shadow-md;
-  @apply shadow;
-  @apply shadow-black;
-}
