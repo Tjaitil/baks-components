@@ -2,10 +2,9 @@
   <button
     @click="handle"
     part="bk-button"
-    class="bk-button hover"
+    class="bk-button hover shadow-sm shadow-black px-6 py-1.5 cursor-pointer rounded min-w-24"
     :class="[resolveVariant(variant), { 'w-full': size === 'block', disabled: disabled }]"
   >
-  hello
     <slot></slot>
   </button>
 </template>
@@ -25,14 +24,24 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const emit = defineEmits<{
-  'bk-button:click': [];
+  'bk:click': [];
 }>();
 
 const handle = () => {
-  emit('bk-button:click');
+  emit('bk:click');
 };
 </script>
 
 <style>
-@import url('./style.css');
+@import url('../../app.css');
+
+.bk-button {
+  font-size: 16px;
+  transition: filter 0.2s ease-out;
+}
+
+.bk-button.disabled {
+  @apply opacity-70;
+  cursor: initial;
+}
 </style>
