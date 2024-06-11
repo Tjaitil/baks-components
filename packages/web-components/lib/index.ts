@@ -1,19 +1,22 @@
 import { defineCustomElement } from 'vue';
-import BaksButtonCe from './components/baks-button/BaksButton.ce.vue';
+import BaksButton from '@baks-components/vue/lib/components/baks-button/BaksButton.vue';
 import './app.css';
 import { registerComponent } from './utilities/registerComponent';
 import BaksCardCe from './components/baks-card/BaksCard.ce.vue';
-import BaksAccordionCe from './components/baks-accordion/BaksAccordion.ce.vue';
+import BaksAccordion from '@baks-components/vue/lib/components/baks-accordion/BaksAccordion.vue';
+import BaksTabCe from '@baks-components/vue/lib/components/baks-tabs/BaksTab.vue';
+import BaksTabPanel from '@baks-components/vue/lib/components/baks-tabs/BaksTabPanel.vue';
+import BaksTabList from './components/baks-tabs/BaksTabsListW.ce.vue';
 export type { ThemeVariant as ThemeVariants } from '@baks-components/shared';
 
 const BaksCard = defineCustomElement(BaksCardCe);
-const BaksButton = defineCustomElement(BaksButtonCe);
-const BaksAccordion = defineCustomElement(BaksAccordionCe);
-// const BaksTab = defineCustomElement(BaksTabCe);
-// const BaksTabListW = defineCustomElement(BaksTabListCe);
-// const BaksTabPanel = defineCustomElement(BaksTabPanelCe);
+const BaksButtonCE = defineCustomElement(BaksButton);
+const BaksAccordionCE = defineCustomElement(BaksAccordion);
+const BaksTabCE = defineCustomElement(BaksTabCe);
+const BaksTabListW = defineCustomElement(BaksTabList);
+const BaksTabPanelCE = defineCustomElement(BaksTabPanel);
 
-export { BaksCardCe as BaksCard, BaksButtonCe as BaksButtonV, BaksAccordionCe as BaksAccordion };
+export { BaksCardCe, BaksButton, BaksAccordion, BaksTabCe, BaksTabListCe, BaksTabPanelCe };
 
 export type Components =
   | 'BaksButton'
@@ -26,32 +29,32 @@ export type Components =
 export function register(specificComponents: Components[] = []) {
   console.log(specificComponents);
   if (specificComponents.length === 0) {
-    registerComponent('baks-button', BaksButton);
+    registerComponent('baks-button', BaksButtonCE);
     registerComponent('baks-card', BaksCard);
-    registerComponent('baks-accordion', BaksAccordion);
-    // registerComponent('baks-tab', BaksTab);
-    // registerComponent('baks-tab-list-w', BaksTabListW);
-    // registerComponent('baks-tab-panel', BaksTabPanel);
+    registerComponent('baks-accordion', BaksAccordionCE);
+    registerComponent('baks-tab', BaksTabCE);
+    registerComponent('baks-tab-panel', BaksTabPanelCE);
+    registerComponent('baks-tab-list-w', BaksTabListW);
   } else {
     specificComponents.forEach((component) => {
       switch (component) {
         case 'BaksButton':
-          registerComponent('baks-button', BaksButton);
+          registerComponent('baks-button', BaksButtonCE);
           break;
         case 'BaksCard':
           registerComponent('baks-card', BaksCard);
           break;
         case 'BaksAccordion':
-          registerComponent('baks-accordion', BaksAccordion);
+          registerComponent('baks-accordion', BaksAccordionCE);
           break;
         case 'BaksTab':
-          // registerComponent('baks-tab', BaksTab);
-          break;
-        case 'BaksTabListW':
-          // registerComponent('baks-tab-list', BaksTabListW);
+          registerComponent('baks-tab', BaksTabCE);
           break;
         case 'BaksTabPanel':
-          // registerComponent('baks-tab-panel', BaksTabPanel);
+          registerComponent('baks-tab-panel', BaksTabPanelCE);
+          break;
+        case 'BaksTabListW':
+          registerComponent('baks-tab-list', BaksTabListW);
           break;
       }
     });
