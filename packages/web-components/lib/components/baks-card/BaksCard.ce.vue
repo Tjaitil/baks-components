@@ -1,7 +1,7 @@
 <template>
   <div
     part="baks-card"
-    class="relative p-4 rounded border-default shadow-sm shadow-black"
+    class="relative p-4 rounded shadow-sm shadow-black"
     :class="resolveVariant(variant)"
   >
     <slot></slot>
