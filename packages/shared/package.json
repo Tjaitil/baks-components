@@ -1,10 +1,14 @@
 {
-  "name": "@baks-components/shared",
+  "name": "@tjaitil/baks-components-styles",
   "version": "0.0.1",
-  "private": true,
-  "description": "Internal repo with shared functionality",
+  "private": false,
+  "description": "A package containing baks components styles and utilities",
   "main": "index.ts",
   "author": "Kjetil Baksaas",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tjaitil/baks-components.git"
+  },
   "scripts": {}
 }
