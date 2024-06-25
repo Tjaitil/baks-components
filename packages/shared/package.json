@@ -6,6 +6,10 @@
   "main": "index.ts",
   "author": "Kjetil Baksaas",
   "license": "MIT",
+  "files": [
+    "index.ts",
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tjaitil/baks-components.git"
