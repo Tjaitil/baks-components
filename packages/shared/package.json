@@ -1,5 +1,5 @@
 {
-  "name": "@tjaitil/baks-components-styles",
+  "name": "baks-components-styles",
   "version": "0.1.0",
   "private": false,
   "description": "A package containing baks components styles and utilities",
