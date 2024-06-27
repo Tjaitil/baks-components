@@ -1,6 +1,6 @@
 {
   "name": "@tjaitil/baks-components-styles",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": false,
   "description": "A package containing baks components styles and utilities",
   "main": "index.ts",
