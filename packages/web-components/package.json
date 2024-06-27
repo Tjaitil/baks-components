@@ -1,7 +1,7 @@
 {
-  "name": "@baks-components/web",
+  "name": "baks-components-web",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -1,7 +1,7 @@
 {
-  "name": "@baks-components/vue",
-  "version": "0.0.1",
-  "private": true,
+  "name": "baks-components-vue",
+  "version": "0.1.0",
+  "private": false,
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,7 +30,7 @@
     "uuid": "^9.0.1",
     "vite-plugin-dts": "^3.9.0",
     "vue": "^3.4.26",
-    "@baks-components/shared": "0.0.1"
+    "baks-components-styles": "^0.1.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.3.3",
@@ -62,6 +62,5 @@
     "vite": "^5.2.8",
     "vitest": "^1.4.0",
     "vue-tsc": "^2.0.11"
-  },
-  "packageManager": "yarn@1.22.19"
+  }
 }

@@ -1,4 +1,4 @@
-import type { StorybookConfig } from '@storybook/web-components-vite';
+import type { StorybookConfig } from '@storybook/vue3-vite';
 
 const config: StorybookConfig = {
   stories: ['../lib/**/*.mdx', '../lib/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -9,7 +9,7 @@ const config: StorybookConfig = {
     '@storybook/addon-interactions'
   ],
   framework: {
-    name: '@storybook/web-components-vite',
+    name: '@storybook/vue3-vite',
     options: {}
   },
   docs: {
