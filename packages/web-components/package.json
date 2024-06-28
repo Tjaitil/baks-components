@@ -30,7 +30,7 @@
     "uuid": "^9.0.1",
     "vite-plugin-dts": "^3.9.0",
     "vue": "^3.4.26",
-    "@baks-components/shared": "0.0.1"
+    "baks-components-styles": "0.1.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.3.3",
