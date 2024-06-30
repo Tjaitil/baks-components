@@ -1,1 +1,2 @@
-# @baks/web-components
+# baks-components-web
+A collection of web components.
