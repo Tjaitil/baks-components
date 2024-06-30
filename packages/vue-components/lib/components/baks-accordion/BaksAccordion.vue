@@ -43,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import { type ThemeVariant, resolveVariant } from '@baks-components/shared';
+import { type ThemeVariant, resolveVariant } from 'baks-components-styles';
 import ChevronDown from '../Icons/ChevronDown.vue';
 import { v4 as uuidv4 } from 'uuid';
 import { ref } from 'vue';

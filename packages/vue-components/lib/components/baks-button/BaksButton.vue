@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { type ThemeVariant, resolveVariant } from '@baks-components/shared';
+import { type ThemeVariant, resolveVariant } from 'baks-components-styles';
 
 interface Props {
   variant: ThemeVariant;
