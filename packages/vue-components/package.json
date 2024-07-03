@@ -8,6 +8,13 @@
   "files": [
     "dist"
   ],
+  "author": "Kjetil Baksaas",
+  "license": "MIT",
+  "description": "A collection of vue components for baks components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tjaitil/baks-components.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" -- && npm run types",
