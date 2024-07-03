@@ -8,6 +8,13 @@
   "files": [
     "dist"
   ],
+  "author": "Kjetil Baksaas",
+  "license": "MIT",
+  "description": "A collection of web components for baks components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tjaitil/baks-components.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" -- && npm run types",
@@ -20,7 +27,8 @@
     "format": "prettier --write src/",
     "build:css": "postcss -r bundle.js",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
