@@ -1,18 +1,14 @@
 import { defineCustomElement } from 'vue';
-import BaksButton from '@baks-components/vue/lib/components/baks-button/BaksButton.vue';
+import BaksButton from 'baks-components-vue/lib/components/baks-button/BaksButton.vue';
 import './app.css';
 import { registerComponent } from './utilities/registerComponent';
 import BaksCardCe from './components/baks-card/BaksCard.ce.vue';
-import BaksAccordion from '@baks-components/vue/lib/components/baks-accordion/BaksAccordion.vue';
-import BaksTab from '@baks-components/vue/lib/components/baks-tabs/BaksTab.vue';
-import BaksTabPanel from '@baks-components/vue/lib/components/baks-tabs/BaksTabPanel.vue';
+import BaksAccordion from 'baks-components-vue/lib/components/baks-accordion/BaksAccordion.vue';
+import BaksTab from 'baks-components-vue/lib/components/baks-tabs/BaksTab.vue';
+import BaksTabPanel from 'baks-components-vue/lib/components/baks-tabs/BaksTabPanel.vue';
 import BaksTabList from './components/baks-tabs/BaksTabsListW.ce.vue';
-export type { ThemeVariant as ThemeVariants } from '@baks-components/shared';
-import {
-  createStylesheet,
-  toStringFromStylesheet
-} from '@baks-components/shared/src/utilities/createStylesheet';
-import fs from 'fs';
+export type { ThemeVariant as ThemeVariants } from 'baks-components-styles';
+
 
 const BaksCard = defineCustomElement(BaksCardCe);
 const BaksButtonCe = defineCustomElement(BaksButton);

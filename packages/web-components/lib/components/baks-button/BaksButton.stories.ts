@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/web-components';
 import { register } from '../../';
 
 import { html } from 'lit';
-import { variantsOptions } from '@baks-components/shared';
+import { variantsOptions } from 'baks-components-styles';
 
 const meta: Meta = {
   component: 'baks-button',
