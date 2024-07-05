@@ -1,0 +1,22 @@
+<template>
+  <div
+    part="baks-card"
+    class="relative p-4 rounded shadow-sm shadow-black"
+    :class="resolveVariant(variant)"
+  >
+    <slot></slot>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { type ThemeVariant, resolveVariant } from 'baks-components-styles';
+
+interface Props {
+  variant: ThemeVariant;
+}
+const props = defineProps<Props>();
+</script>
+
+<style>
+@import url('../../app.css');
+</style>
