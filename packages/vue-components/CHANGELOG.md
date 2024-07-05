@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.2.0...baks-components-vue@0.2.1) (2024-07-05)
+
+
+### Bug Fixes
+
+* **baks-components-vue:** fix missing component exports ([dbcd4e3](https://github.com/Tjaitil/baks-components/commit/dbcd4e3323820d24f8a0f22f19c2032d0e84f19f))
+
+
+
+
+
 # [0.2.0](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.1.3...baks-components-vue@0.2.0) (2024-07-05)
 
 
