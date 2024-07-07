@@ -61,7 +61,7 @@ export function register(specificComponents: Components[] = []) {
           registerComponent('baks-tab-panel', BaksTabPanelCe);
           break;
         case 'BaksTabListW':
-          registerComponent('baks-tab-list', BaksTabListW);
+          registerComponent('baks-tab-list-w', BaksTabListW);
           break;
       }
     });
