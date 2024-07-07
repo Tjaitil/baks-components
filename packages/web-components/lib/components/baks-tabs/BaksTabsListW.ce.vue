@@ -1,9 +1,16 @@
 <template>
-  <div class="bk-tabs-list-w" ref="tabsWrapper" part="bk-tabs-list-w">
+  <div
+    class="bk-tabs-list-w"
+    ref="tabsWrapper"
+    part="bk-tabs-list-w"
+    :class="direction"
+  >
     <div class="bk-tabs border-none" :class="direction" part="bk-tabs">
       <slot></slot>
     </div>
-    <slot name="panel"></slot>
+    <div id="panels-container">
+      <slot name="panel"></slot>
+    </div>
   </div>
 </template>
 
@@ -113,11 +120,23 @@ onMounted(() => {
 .baks-tabs.flex-col > .bk-tab:nth-of-type(2n):not(:last-child) {
   border-bottom: none;
 }
+
 .bk-tabs {
-  @apply flex;
-  @apply flex-col;
+  display: flex;
+  flex-direction: column;
 }
 .bk-tabs.horizontal {
-  @apply flex-row;
+  flex-direction: row;
+}
+
+.bk-tabs-list-w {
+  display: flex;
+  flex-direction: row;
+}
+.bk-tabs-list-w.horizontal {
+  flex-direction: column;
+}
+#panels-container {
+  flex-grow: 1;
 }
 </style>
