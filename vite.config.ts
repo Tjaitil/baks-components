@@ -9,8 +9,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@baks': path.resolve(__dirname, './packages'),
-      '@test': fileURLToPath(new URL('packages', import.meta.url))
+      '@shared': fileURLToPath(new URL('packages/shared/src', import.meta.url))
     }
   }
 });
