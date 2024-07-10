@@ -1,6 +1,5 @@
 <template>
   <button
-    @click="handle"
     part="bk-button"
     class="bk-button hover shadow-sm shadow-black px-6 py-1.5 cursor-pointer rounded min-w-24"
     :class="[resolveVariant(variant), { 'w-full': size === 'block', disabled: disabled }]"
@@ -22,26 +21,8 @@ const props = withDefaults(defineProps<Props>(), {
   size: 'normal',
   disabled: false
 });
-
-const emit = defineEmits<{
-  'bk:click': [];
-}>();
-
-const handle = () => {
-  emit('bk:click');
-};
 </script>
 
 <style>
-@import url('../../app.css');
-
-.bk-button {
-  font-size: 16px;
-  transition: filter 0.2s ease-out;
-}
-
-.bk-button.disabled {
-  @apply opacity-70;
-  cursor: initial;
-}
+@import url('@shared/css/baks-button.css');
 </style>

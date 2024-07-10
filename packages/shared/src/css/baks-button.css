@@ -1,0 +1,14 @@
+@import url('./variant.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bk-button {
+  font-size: 16px;
+  transition: filter 0.2s ease-out;
+}
+
+.bk-button.disabled {
+  @apply opacity-70;
+  cursor: initial;
+}
