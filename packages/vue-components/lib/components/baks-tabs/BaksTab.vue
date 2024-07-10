@@ -51,23 +51,5 @@ const handleClick = () => {
 </script>
 
 <style>
-@import url('../../app.css');
-.bk-tab {
-  @apply min-w-16;
-  @apply w-28;
-  @apply p-3;
-}
-.bk-tab.horizontal.special {
-  border-left: none;
-  &:not(.last) {
-    border-right: none;
-  }
-}
-
-.bk-tab.vertical.special {
-  border-top: none;
-  &:not(.last) {
-    border-bottom: none;
-  }
-}
+@import url('@shared/css/baks-tab.css');
 </style>
