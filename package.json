@@ -5,9 +5,7 @@
     "packages/*"
   ],
   "type": "module",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
+  "description": "Monorepo for Baks Components",
   "author": "Kjetil Baksaas",
   "license": "MIT",
   "devDependencies": {
