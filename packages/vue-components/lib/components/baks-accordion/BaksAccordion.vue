@@ -79,9 +79,6 @@ const toggleIsOpen = () => {
 <style>
 @import url('../../app.css');
 .bk-accordion.expanded {
-  & .bk-accordion-header {
-    @apply border-b-2;
-  }
   &.bk-primary .bk-accordion-header {
     border-color: var(--primary-color-border);
   }
