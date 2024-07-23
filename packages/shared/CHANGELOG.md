@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/Tjaitil/baks-components/compare/baks-components-styles@0.1.3...baks-components-styles@0.2.0) (2024-07-23)
+
+
+### Features
+
+* **baks-button:** move css to shared package ([9aa9d15](https://github.com/Tjaitil/baks-components/commit/9aa9d15f8a7c11789d10c30bf285c49966b72225))
+* **baks-tab:** move css to shared package ([fadddfd](https://github.com/Tjaitil/baks-components/commit/fadddfd76083a2158716ac84e76a155163766242))
+
+
+
+
+
 ## [0.1.3](https://github.com/Tjaitil/baks-components/compare/baks-components-styles@0.1.2...baks-components-styles@0.1.3) (2024-06-30)
 
 **Note:** Version bump only for package baks-components-styles

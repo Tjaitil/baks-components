@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.2.1...baks-components-vue@0.3.0) (2024-07-23)
+
+
+### Bug Fixes
+
+* **BaksAccordion:** remove styling causing glitchy animation ([632261a](https://github.com/Tjaitil/baks-components/commit/632261aed72fd91f2ec44752d434e20b36cff95f))
+
+
+### Features
+
+* **baks-button:** move css to shared package ([9aa9d15](https://github.com/Tjaitil/baks-components/commit/9aa9d15f8a7c11789d10c30bf285c49966b72225))
+* **baks-tab:** move css to shared package ([fadddfd](https://github.com/Tjaitil/baks-components/commit/fadddfd76083a2158716ac84e76a155163766242))
+
+
+
+
+
 ## [0.2.1](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.2.0...baks-components-vue@0.2.1) (2024-07-05)
 
 
