@@ -1,5 +1,5 @@
 import { defineCustomElement } from 'vue';
-import BaksButton from 'baks-components-vue/lib/components/baks-button/BaksButton.vue';
+import { BaksButton } from './components/baks-button/BaksButton'
 import './app.css';
 import { registerComponent } from './utilities/registerComponent';
 import BaksCardCe from './components/baks-card/BaksCard.ce.vue';
@@ -11,7 +11,6 @@ export type { ThemeVariant as ThemeVariants } from 'baks-components-styles';
 
 
 const BaksCard = defineCustomElement(BaksCardCe);
-const BaksButtonCe = defineCustomElement(BaksButton);
 const BaksAccordionCE = defineCustomElement(BaksAccordion);
 const BaksTabCE = defineCustomElement(BaksTab);
 const BaksTabListW = defineCustomElement(BaksTabList);
@@ -19,7 +18,7 @@ const BaksTabPanelCe = defineCustomElement(BaksTabPanel);
 
 export {
   BaksCard,
-  BaksButtonCe as BaksButton,
+  BaksButton,
   BaksAccordion,
   BaksTabCE as BaksTab,
   BaksTabListW as BaksTabList,
@@ -36,7 +35,6 @@ export type Components =
 
 export function register(specificComponents: Components[] = []) {
   if (specificComponents.length === 0) {
-    registerComponent('baks-button', BaksButtonCe);
     registerComponent('baks-card', BaksCard);
     registerComponent('baks-accordion', BaksAccordionCE);
     registerComponent('baks-tab', BaksTabCE);
@@ -45,9 +43,6 @@ export function register(specificComponents: Components[] = []) {
   } else {
     specificComponents.forEach((component) => {
       switch (component) {
-        case 'BaksButton':
-          registerComponent('baks-button', BaksButtonCe);
-          break;
         case 'BaksCard':
           registerComponent('baks-card', BaksCard);
           break;
