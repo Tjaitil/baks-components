@@ -1,3 +1,10 @@
 {
   "extends": "../../tsconfig.json",
+  "include": ["lib/**/*", "src/**/*", "env.d.ts", "css.d.ts"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+  }
 }
