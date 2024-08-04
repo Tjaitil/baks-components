@@ -22,7 +22,7 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-register(['BaksTabListW', 'BaksTab', 'BaksTabPanel']);
+register(['BaksTabList', 'BaksTab', 'BaksTabPanel']);
 
 export const Normal: Story = {
   args: {
@@ -30,7 +30,7 @@ export const Normal: Story = {
     variant: 'primary'
   },
   render: ({ direction, variant }) => {
-    return html`     <baks-tab-list-w direction="${direction}">
+    return html`     <baks-tab-list direction="${direction}">
       <baks-tab variant="${variant}" tab-group="sidebar-tab" controls="sidebar-log-tabpanel" role="tab" selected>
         Test 1
       </baks-tab>
@@ -40,12 +40,12 @@ export const Normal: Story = {
       <baks-tab variant="${variant}" tab-group="sidebar-tab" controls="sidebar-log-tabpanel3" role="tab">
         Test 3
       </baks-tab>
-      <div slot="panel">
+      <div slot="panels">
         <baks-tab-panel id="sidebar-log-tabpanel" role="tabpanel">Hello</baks-tab-panel>
         <baks-tab-panel id="sidebar-log-tabpanel2" role="tabpanel">2</baks-tab-panel>
         <baks-tab-panel id="sidebar-log-tabpanel3" role="tabpanel">3</baks-tab-panel>
       </div>
-    </baks-tab-list-w>`;
+    </baks-tab-list>`;
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
