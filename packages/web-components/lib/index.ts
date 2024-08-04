@@ -6,7 +6,7 @@ import BaksCardCe from './components/baks-card/BaksCard.ce.vue';
 import BaksAccordion from 'baks-components-vue/lib/components/baks-accordion/BaksAccordion.vue';
 import BaksTab from 'baks-components-vue/lib/components/baks-tabs/BaksTab.vue';
 import BaksTabPanel from 'baks-components-vue/lib/components/baks-tabs/BaksTabPanel.vue';
-import BaksTabList from './components/baks-tabs/BaksTabsListW.ce.vue';
+import BaksTabList from './components/baks-tabs/BaksTabsList.ce.vue';
 export type { ThemeVariant as ThemeVariants } from 'baks-components-styles';
 
 
@@ -30,7 +30,7 @@ export type Components =
   | 'BaksCard'
   | 'BaksAccordion'
   | 'BaksTab'
-  | 'BaksTabListW'
+  | 'BaksTabList'
   | 'BaksTabPanel';
 
 export function register(specificComponents: Components[] = []) {
@@ -39,7 +39,7 @@ export function register(specificComponents: Components[] = []) {
     registerComponent('baks-accordion', BaksAccordionCE);
     registerComponent('baks-tab', BaksTabCE);
     registerComponent('baks-tab-panel', BaksTabPanelCe);
-    registerComponent('baks-tab-list-w', BaksTabListW);
+    registerComponent('baks-tab-list', BaksTabListW);
   } else {
     specificComponents.forEach((component) => {
       switch (component) {
@@ -55,8 +55,8 @@ export function register(specificComponents: Components[] = []) {
         case 'BaksTabPanel':
           registerComponent('baks-tab-panel', BaksTabPanelCe);
           break;
-        case 'BaksTabListW':
-          registerComponent('baks-tab-list-w', BaksTabListW);
+        case 'BaksTabList':
+          registerComponent('baks-tab-list', BaksTabListW);
           break;
       }
     });

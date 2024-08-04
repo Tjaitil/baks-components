@@ -7,7 +7,7 @@
       <slot></slot>
     </div>
     <div id="panels-container">
-      <slot name="panel"></slot>
+      <slot name="panels"></slot>
     </div>
   </div>
 </template>
