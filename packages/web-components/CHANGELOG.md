@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/Tjaitil/baks-components/compare/baks-components-web@0.1.6...baks-components-web@0.2.0) (2024-08-04)
+
+
+### Code Refactoring
+
+* **BaksTabList:** rename slot and component name ([#4](https://github.com/Tjaitil/baks-components/issues/4)) ([e070e7c](https://github.com/Tjaitil/baks-components/commit/e070e7cbeaba5a5f2358d170bc9c621cf7ed9349))
+
+
+### Features
+
+* **BaksButton:** refactor and add submit prop ([b759dd2](https://github.com/Tjaitil/baks-components/commit/b759dd24fe73693d229144bc84d719543b3deffc))
+
+
+### BREAKING CHANGES
+
+* **BaksTabList:** Slot to render panels is renamed. Component is renamed
+
+
+
+
+
 ## [0.1.6](https://github.com/Tjaitil/baks-components/compare/baks-components-web@0.1.5...baks-components-web@0.1.6) (2024-07-23)
 
 **Note:** Version bump only for package baks-components-web
