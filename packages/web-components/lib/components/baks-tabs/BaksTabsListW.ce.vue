@@ -2,9 +2,7 @@
   <div
     class="bk-tabs-list-w"
     ref="tabsWrapper"
-    part="bk-tabs-list-w"
-    :class="direction"
-  >
+    part="bk-tabs-list-w" :class="direction">
     <div class="bk-tabs border-none" :class="direction" part="bk-tabs">
       <slot></slot>
     </div>
@@ -17,11 +15,6 @@
 <script setup lang="ts">
 import { getCurrentInstance, onMounted, ref, watch } from 'vue';
 
-interface HTMLElementVue extends HTMLElement {
-  _props: {
-    [key: string]: string;
-  };
-}
 interface Props {
   direction?: 'horizontal' | 'vertical';
 }
@@ -30,11 +23,11 @@ const props = withDefaults(defineProps<Props>(), {
   direction: 'horizontal'
 });
 
-const tabsWrapper = ref<HTMLElementVue | null>();
+const tabsWrapper = ref<HTMLElement | null>();
 
-const tabs = ref<HTMLElementVue[]>([]);
+const tabs = ref<HTMLElement[]>([]);
 
-const tabsPanels = ref<HTMLElementVue[]>([]);
+const tabsPanels = ref<HTMLElement[]>([]);
 const visibleTabPanel = ref<string>();
 const setVisibleTabPanel = (id: string) => {
   visibleTabPanel.value = id;
@@ -45,15 +38,6 @@ const setVisibleTabPanel = (id: string) => {
       panel.removeAttribute('is-visible');
     }
   });
-};
-
-const togglePanel = (id: string, shouldHide: boolean) => {
-  const element = document.querySelectorAll(`#${id}`)[0];
-  if (shouldHide) {
-    element.removeAttribute('is-visible');
-  } else {
-    element.setAttribute('is-visible', '');
-  }
 };
 
 watch(
@@ -69,8 +53,7 @@ onMounted(() => {
   const instance = getCurrentInstance();
   const root = instance?.root.vnode.el;
   const host = root?.parentNode.host as HTMLElement;
-
-  tabs.value = <HTMLElementVue[]>(
+  tabs.value = <HTMLElement[]>(
     [...host?.children].filter((element) => element.tagName === 'BAKS-TAB')
   );
 
@@ -83,25 +66,26 @@ onMounted(() => {
       }
     }
 
-    const element = <HTMLElementVue>document.querySelectorAll(`#${tab._props.controls}`)[0];
+    const tabPanelIdentifier = tab.attributes.getNamedItem("controls").value;
+    const element = <HTMLElement>document.querySelectorAll(`#${tabPanelIdentifier}`)[0];
+
     if (element !== undefined) {
       tabsPanels.value.push(element);
     }
 
     if (tab.hasAttribute('selected')) {
-      setVisibleTabPanel(tab._props.controls);
+      setVisibleTabPanel(tabPanelIdentifier);
     }
 
-    tab.addEventListener('bk:click', (e) => {
-      tabs.value.forEach((tab) => {
-        if (tab !== e.target) {
-          tab.removeAttribute('selected');
-          togglePanel(tab._props.controls, true);
+    tab.addEventListener('click', (e) => {
+      tabs.value.forEach(element => {
+        if(element !== e.target) {
+          element.removeAttribute('selected');
         } else {
-          tab.setAttribute('selected', '');
-          setVisibleTabPanel(tab._props.controls);
-        }
+          element.setAttribute('selected', '');
+        } 
       });
+      setVisibleTabPanel(tabPanelIdentifier);
     });
   });
 });
