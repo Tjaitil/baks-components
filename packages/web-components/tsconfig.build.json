@@ -1,12 +1,16 @@
 {
     "compilerOptions": {
+      "target": "ESNext",
+      "moduleResolution": "Node",
       "outDir": "dist",
       "declaration": true,
       "emitDeclarationOnly": true,
       "downlevelIteration": true,
+      "experimentalDecorators": true,
+      "useDefineForClassFields": false,  
       "paths": {
         "@/*": ["./lib/*"]
       }
     },
-    "include": ["lib/**/*", "lib/**/*.vue", "lib/**/*.ce.vue"]
+    "include": ["lib/**/*", "lib/**/*.vue", "lib/**/*.ce.vue", "env.d.ts", "css.d.ts"]
   }
