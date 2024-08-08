@@ -2,12 +2,11 @@
   <div
     class="bk-tabs-list-w"
     ref="tabsWrapper"
-    part="bk-tabs-list-w" :class="direction">
-    <div class="bk-tabs border-none" :class="direction" part="bk-tabs">
+    part="bk-tabs-list-w" :class="direction"
+    role="tablist"
+    >
+    <div class="bk-tabs border-none" :class="direction" part="bk-tabs" role="none presentation">
       <slot></slot>
-    </div>
-    <div id="panels-container">
-      <slot name="panels"></slot>
     </div>
   </div>
 </template>
