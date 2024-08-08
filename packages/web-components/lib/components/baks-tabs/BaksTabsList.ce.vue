@@ -2,13 +2,10 @@
   <div
     class="bk-tabs-list-w"
     ref="tabsWrapper"
-    part="bk-tabs-list-w" :class="direction">
-    <div class="bk-tabs border-none" :class="direction" part="bk-tabs">
+    part="bk-tabs-list-w" :class="direction"
+    role="tablist"
+    >
       <slot></slot>
-    </div>
-    <div id="panels-container">
-      <slot name="panels"></slot>
-    </div>
   </div>
 </template>
 
@@ -61,8 +58,10 @@ onMounted(() => {
     if (index % 2 == 0) {
       tab.classList.add(props.direction);
       tab.classList.add('special');
-      if (tabs.value.length === index - 1) {
+      if (tabs.value.length - 1 === index) {
         tab.classList.add('last');
+      } else if(index === 0) {
+        tab.classList.add('first');
       }
     }
 
@@ -105,22 +104,11 @@ onMounted(() => {
   border-bottom: none;
 }
 
-.bk-tabs {
-  display: flex;
-  flex-direction: column;
-}
-.bk-tabs.horizontal {
-  flex-direction: row;
-}
-
 .bk-tabs-list-w {
   display: flex;
-  flex-direction: row;
-}
-.bk-tabs-list-w.horizontal {
   flex-direction: column;
 }
-#panels-container {
-  flex-grow: 1;
+.bk-tabs-list-w.horizontal {
+  flex-direction: row;
 }
 </style>

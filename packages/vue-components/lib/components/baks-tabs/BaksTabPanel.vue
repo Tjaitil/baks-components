@@ -1,21 +1,21 @@
 <template>
   <div
-    v-if="isVisible"
-    class="bk-tab-panel p-4 rounded rounded-t-none shadow-sm shadow-black"
     part="bk-tab-panel"
-    :class="resolveVariant(variant)"
+    role="tabpanel"
+    class="p-4"
+    :class="{ hidden: !props.isVisible }"
+    :aria-labelledby="controlledBy"
+    :id="($attrs.id as string)"
   >
     <slot></slot>
   </div>
 </template>
 
 <script setup lang="ts">
-import { resolveVariant } from 'baks-components-styles';
-import type { ThemeVariant } from 'baks-components-styles';
 
 interface Props {
-  variant: ThemeVariant;
   isVisible?: boolean;
+  controlledBy: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {

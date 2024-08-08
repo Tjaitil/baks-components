@@ -26,26 +26,26 @@ register(['BaksTabList', 'BaksTab', 'BaksTabPanel']);
 
 export const Normal: Story = {
   args: {
-    direction: 'horizontal',
+    direction: "vertical",
     variant: 'primary'
   },
   render: ({ direction, variant }) => {
-    return html`     <baks-tab-list direction="${direction}">
-      <baks-tab variant="${variant}" tab-group="sidebar-tab" controls="sidebar-log-tabpanel" role="tab" selected>
-        Test 1
-      </baks-tab>
-      <baks-tab variant="${variant}" tab-group="sidebar-tab" controls="sidebar-log-tabpanel2" role="tab">
-        Test 2
-      </baks-tab>
-      <baks-tab variant="${variant}" tab-group="sidebar-tab" controls="sidebar-log-tabpanel3" role="tab">
-        Test 3
-      </baks-tab>
-      <div slot="panels">
-        <baks-tab-panel id="sidebar-log-tabpanel" role="tabpanel">Hello</baks-tab-panel>
-        <baks-tab-panel id="sidebar-log-tabpanel2" role="tabpanel">2</baks-tab-panel>
-        <baks-tab-panel id="sidebar-log-tabpanel3" role="tabpanel">3</baks-tab-panel>
+    return html`
+    <div class="flex flex-col">
+      <baks-tab-list direction="${direction}" role="tablist">
+        <baks-tab variant="${variant}" tab-group="sidebar-tab" controls="sidebar-log-tabpanel" role="tab" id="tab1">
+          Test 1
+        </baks-tab>
+        <baks-tab variant="${variant}" tab-group="sidebar-tab" controls="sidebar-log-tabpanel2" role="tab" id="tab2" selected>
+          Test 2
+        </baks-tab>
+      </baks-tab-list>
+      <div>
+          <baks-tab-panel id="sidebar-log-tabpanel" controlled-by="tab1" role="tabpanel">Hello</baks-tab-panel>
+          <baks-tab-panel id="sidebar-log-tabpanel2" controlled-by="tab2" role="tabpanel">2</baks-tab-panel>
       </div>
-    </baks-tab-list>`;
+    </div>
+    `;
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
