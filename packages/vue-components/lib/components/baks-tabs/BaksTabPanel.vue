@@ -4,6 +4,8 @@
     role="tabpanel"
     class="p-4"
     :class="{ hidden: !props.isVisible }"
+    :aria-labelledby="controlledBy"
+    :id="($attrs.id as string)"
   >
     <slot></slot>
   </div>
@@ -13,6 +15,7 @@
 
 interface Props {
   isVisible?: boolean;
+  controlledBy: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {

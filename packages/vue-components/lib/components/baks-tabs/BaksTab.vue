@@ -4,9 +4,10 @@
     class="bk-tab block text-center rounded hover min-w-16 w-28 p-3"
     :class="[resolveVariant(variant), { 'is-selected': isSelected }]"
     part="bk-tab"
-    @click="handleClick"
     ref="element"
     :aria-controls="controls"
+    :aria-selected="isSelected"
+    role="tab"
   >
     <slot></slot>
   </button>
@@ -21,7 +22,7 @@ interface Props {
   variant: ThemeVariant;
   tabGroup: string;
   selected?: boolean;
-  controls?: string;
+  controls: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -39,15 +40,6 @@ watch(
 
 const element = ref<HTMLElement | null>(null);
 
-const handleClick = () => {
-  element.value?.dispatchEvent(
-    new CustomEvent('bk:click', {
-      detail: { tabGroup: props.tabGroup },
-      bubbles: true,
-      composed: true
-    })
-  );
-};
 </script>
 
 <style>
