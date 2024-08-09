@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/Tjaitil/baks-components/compare/baks-components-styles@0.2.0...baks-components-styles@0.2.1) (2024-08-09)
+
+
+### Bug Fixes
+
+* **BaksTab:** border removed on wrong direction ([05d27c1](https://github.com/Tjaitil/baks-components/commit/05d27c11de382bb9104781b15b758228e64d270c))
+
+
+
+
+
 # [0.2.0](https://github.com/Tjaitil/baks-components/compare/baks-components-styles@0.1.3...baks-components-styles@0.2.0) (2024-07-23)
 
 

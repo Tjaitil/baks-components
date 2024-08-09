@@ -8,14 +8,18 @@
   @apply p-3;
 }
 .bk-tab.horizontal.special {
-  border-left: none;
-  &:not(.last) {
+  :not(.first) {
+    border-left: none;
+  }
+  :not(.last) {
     border-right: none;
   }
 }
 .bk-tab.vertical.special {
-  border-top: none;
-  &:not(.last) {
+  :not(.first) {
+    border-top: none;
+  }
+  :not(.last) {
     border-bottom: none;
   }
 }
