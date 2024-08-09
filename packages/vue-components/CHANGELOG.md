@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.3.0...baks-components-vue@0.4.0) (2024-08-09)
+
+
+### Bug Fixes
+
+* **BaksTabPanel:** remove default styling ([5f9b793](https://github.com/Tjaitil/baks-components/commit/5f9b7939f5e855f54be63e56ba1782ea92464be2))
+
+
+### Features
+
+* improve accessibility for tab components ([8b0892a](https://github.com/Tjaitil/baks-components/commit/8b0892ae02d7d701f0dac978fdc7c8f4972f87fa))
+
+
+### BREAKING CHANGES
+
+* **BaksTabPanel:** Variant is no longer applicable to BaksTabPanel
+
+
+
+
+
 # [0.3.0](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.2.1...baks-components-vue@0.3.0) (2024-07-23)
 
 
