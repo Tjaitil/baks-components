@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/Tjaitil/baks-components/compare/baks-components-web@0.2.1...baks-components-web@0.3.0) (2024-08-09)
+
+
+### Features
+
+* **BaksTabPanel:** improve accessibility ([d87bfd7](https://github.com/Tjaitil/baks-components/commit/d87bfd78b70cb0de994045dc4c219667c61a50c3))
+
+
+### BREAKING CHANGES
+
+* **BaksTabPanel:** Variant is no longer applicable to BaksTabPanel
+
+
+
+
+
 ## [0.2.1](https://github.com/Tjaitil/baks-components/compare/baks-components-web@0.2.0...baks-components-web@0.2.1) (2024-08-09)
 
 **Note:** Version bump only for package baks-components-web

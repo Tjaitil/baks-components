@@ -1,6 +1,6 @@
 {
   "name": "baks-components-web",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": false,
   "type": "module",
   "main": "dist/index.js",
@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
-    "baks-components-styles": "^0.2.1",
+    "baks-components-styles": "^0.2.2",
     "glob": "^10.3.12",
     "lit": "^3.1.4",
     "tailwindcss": "^3.4.3",
