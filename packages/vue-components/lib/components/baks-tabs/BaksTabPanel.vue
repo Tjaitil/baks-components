@@ -2,7 +2,7 @@
   <div
     part="bk-tab-panel"
     role="tabpanel"
-    class="p-4"
+    class="p-4 bk-tab-panel"
     :class="{ hidden: !props.isVisible }"
     :aria-labelledby="controlledBy"
     :id="($attrs.id as string)"
