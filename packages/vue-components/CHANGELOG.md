@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.4.1...baks-components-vue@0.4.2) (2024-08-15)
+
+
+### Bug Fixes
+
+* **BaksCard:** missing bk-card classname ([c713260](https://github.com/Tjaitil/baks-components/commit/c7132609f7d2bf26ae96548bb6f65d9ecd11f265))
+
+
+
+
+
 ## [0.4.1](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.4.0...baks-components-vue@0.4.1) (2024-08-09)
 
 **Note:** Version bump only for package baks-components-vue
