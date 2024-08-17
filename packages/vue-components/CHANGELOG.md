@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.4.2...baks-components-vue@0.4.3) (2024-08-17)
+
+
+### Bug Fixes
+
+* **BaksTabPanel:** fix missing class name ([3e3f45d](https://github.com/Tjaitil/baks-components/commit/3e3f45d90fa07da9d83bab995a9ee69c952ac69c))
+
+
+
+
+
 ## [0.4.2](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.4.1...baks-components-vue@0.4.2) (2024-08-15)
 
 
