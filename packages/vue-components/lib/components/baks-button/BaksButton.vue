@@ -1,5 +1,6 @@
 <template>
   <button
+    :type
     part="bk-button"
     class="bk-button hover shadow-sm shadow-black px-6 py-1.5 cursor-pointer rounded min-w-24"
     :class="[resolveVariant(variant), { 'w-full': size === 'block', disabled: disabled }]"
@@ -12,12 +13,14 @@
 import { type ThemeVariant, resolveVariant } from 'baks-components-styles';
 
 interface Props {
+  type?: 'button' | 'submit' | 'reset';
   variant: ThemeVariant;
   size?: 'normal' | 'block';
   disabled?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
+  type: 'button',
   size: 'normal',
   disabled: false
 });
