@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.4.3...baks-components-vue@0.5.0) (2024-10-03)
+
+
+### Features
+
+* **BaksButton:** add default value for button type ([#10](https://github.com/Tjaitil/baks-components/issues/10)) ([9acf165](https://github.com/Tjaitil/baks-components/commit/9acf1659380ce429bf96625e14427606156b55ba))
+
+
+
+
+
 ## [0.4.3](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.4.2...baks-components-vue@0.4.3) (2024-08-17)
 
 
