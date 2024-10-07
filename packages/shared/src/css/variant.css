@@ -3,6 +3,7 @@
   :root {
     --base-light-text-color: theme(colors.gray.50);
     --base-dark-text-color: '#1f2937';
+    --box-shadow : 0 0 3px 2px;
 
     --primary-color: theme(colors.sky.500);
     --primary-color-hover: theme(colors.sky.600);
@@ -205,33 +206,33 @@
 
 .bk-primary.focus:focus,
 .bk-primary .focus:focus {
-  background-color: var(--primary-color-focus);
+  box-shadow: var(--box-shadow) var(--primary-color-focus);
 }
 .bk-secondary.focus:focus,
 .bk-secondary .focus:focus {
-  background-color: var(--secondary-color-focus);
+  box-shadow: var(--box-shadow) var(--secondary-color-focus);
 }
 .bk-dark.focus:focus,
 .bk-dark .focus:focus {
-  background-color: var(--dark-color-focus);
+  box-shadow: var(--box-shadow) var(--dark-color-focus);
 }
 .bk-light.focus:focus,
 .bk-light .focus:focus {
-  background-color: var(--light-color-focus);
+  box-shadow: var(--box-shadow) var(--light-color-focus);
 }
 .bk-success.focus:focus,
 .bk-success .focus:focus {
-  background-color: var(--success-color-focus);
+  box-shadow: var(--box-shadow) var(--success-color-focus);
 }
 .bk-error.focus:focus,
 .bk-error .focus:focus {
-  background-color: var(--error-color-focus);
+  box-shadow: var(--box-shadow) var(--error-color-focus);
 }
 .bk-warning.focus:focus,
 .bk-warning .focus:focus {
-  background-color: var(--warning-color-focus);
+  box-shadow: var(--box-shadow) var(--warning-color-focus);
 }
 .bk-info.focus:focus,
 .bk-info .focus:focus {
-  background-color: var(--info-color-focus);
+  box-shadow: var(--box-shadow) var(--info-color-focus);
 }
