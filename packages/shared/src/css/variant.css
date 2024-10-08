@@ -2,7 +2,7 @@
   :host,
   :root {
     --base-light-text-color: theme(colors.gray.50);
-    --base-dark-text-color: '#1f2937';
+    --base-dark-text-color: #1f2937;
     --box-shadow: 0 0 3px 2px;
 
     --primary-color: theme(colors.sky.500);
