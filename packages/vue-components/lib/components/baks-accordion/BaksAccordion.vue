@@ -115,17 +115,6 @@ const toggleIsOpen = () => {
   }
 }
 
-.bk-dark,
-.bk-error,
-.bk-secondary,
-.bk-success,
-.bk-info,
-.bk-primary {
-  .chevron-down path {
-    stroke: var(--base-light-text-color);
-  }
-}
-
 .bk-accordion-content {
   transition: all 0.3s ease-out;
 }
