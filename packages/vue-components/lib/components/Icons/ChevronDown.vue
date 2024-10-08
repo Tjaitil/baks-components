@@ -12,6 +12,7 @@
   >
     <path
       d="M6 9L12 15L18 9"
+      class="stroke"
       stroke="#000000"
       stroke-width="2"
       stroke-linecap="round"
