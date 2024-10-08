@@ -3,7 +3,7 @@
   :root {
     --base-light-text-color: theme(colors.gray.50);
     --base-dark-text-color: '#1f2937';
-    --box-shadow : 0 0 3px 2px;
+    --box-shadow: 0 0 3px 2px;
 
     --primary-color: theme(colors.sky.500);
     --primary-color-hover: theme(colors.sky.600);
@@ -235,4 +235,67 @@
 .bk-info.focus:focus,
 .bk-info .focus:focus {
   box-shadow: var(--box-shadow) var(--info-color-focus);
+}
+
+.bk-primary .bk-icon,
+.bk-primary.bk-icon {
+  & path.stroke {
+    stroke: var(--primary-color-text);
+  }
+}
+
+.bk-secondary .bk-icon,
+.bk-secondary.bk-icon {
+  & path.stroke {
+    stroke: var(--secondary-color-text);
+  }
+}
+
+.bk-dark .bk-icon,
+.bk-dark.bk-icon {
+  & path.stroke {
+    stroke: var(--dark-color-text);
+  }
+}
+
+.bk-light .bk-icon,
+.bk-light.bk-icon {
+  & path.stroke {
+    stroke: var(--light-color-text);
+  }
+}
+
+.bk-success .bk-icon,
+.bk-success.bk-icon {
+  & path.stroke {
+    stroke: var(--success-color-text);
+  }
+}
+
+.bk-error .bk-icon,
+.bk-error.bk-icon {
+  & path.stroke {
+    stroke: var(--error-color-text);
+  }
+}
+
+.bk-warning .bk-icon,
+.bk-warning.bk-icon {
+  & path.stroke {
+    stroke: var(--warning-color-text);
+  }
+}
+
+.bk-info .bk-icon,
+.bk-info.bk-icon {
+  & path.stroke {
+    stroke: var(--info-color-text);
+  }
+}
+
+.bk-light .bk-icon,
+.bk-light.bk-icon {
+  & path.stroke {
+    stroke: var(--light-color-text);
+  }
 }
