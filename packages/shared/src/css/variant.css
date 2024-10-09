@@ -81,7 +81,7 @@
 
   &.hover:hover,
   .hover:hover {
-    &:not(.disabled) {
+    &:not(.disabled, :disabled) {
       background-color: var(--primary-color-hover);
     }
   }
@@ -94,7 +94,9 @@
 
   .focus:focus,
   &.focus:focus {
-    box-shadow: var(--box-shadow) var(--primary-color-focus);
+    &:not(.disabled, :disabled) {
+      box-shadow: var(--box-shadow) var(--primary-color-focus);
+    }
   }
 
   .bk-icon {
@@ -111,7 +113,7 @@
 
   &.hover:hover,
   .hover:hover {
-    &:not(.disabled) {
+    &:not(.disabled, :disabled) {
       background-color: var(--secondary-color-hover);
     }
   }
@@ -125,7 +127,9 @@
 
   .focus:focus,
   &.focus:focus {
-    box-shadow: var(--box-shadow) var(--secondary-color-focus);
+    &:not(.disabled, :disabled) {
+      box-shadow: var(--box-shadow) var(--secondary-color-focus);
+    }
   }
 
   .bk-icon {
@@ -142,7 +146,7 @@
 
   &.hover:hover,
   .hover:hover {
-    &:not(.disabled) {
+    &:not(.disabled, :disabled) {
       background-color: var(--dark-color-hover);
     }
   }
@@ -156,7 +160,9 @@
 
   .focus:focus,
   &.focus:focus {
-    box-shadow: var(--box-shadow) var(--dark-color-focus);
+    &:not(.disabled, :disabled) {
+      box-shadow: var(--box-shadow) var(--dark-color-focus);
+    }
   }
 
   .bk-icon {
@@ -173,7 +179,7 @@
 
   &.hover:hover,
   .hover:hover {
-    &:not(.disabled) {
+    &:not(.disabled, :disabled) {
       background-color: var(--light-color-hover);
     }
   }
@@ -187,7 +193,9 @@
 
   .focus:focus,
   &.focus:focus {
-    box-shadow: var(--box-shadow) var(--light-color-focus);
+    &:not(.disabled, :disabled) {
+      box-shadow: var(--box-shadow) var(--light-color-focus);
+    }
   }
 
   .bk-icon {
@@ -204,7 +212,7 @@
 
   &.hover:hover,
   .hover:hover {
-    &:not(.disabled) {
+    &:not(.disabled, :disabled) {
       background-color: var(--success-color-hover);
     }
   }
@@ -218,7 +226,9 @@
 
   .focus:focus,
   &.focus:focus {
-    box-shadow: var(--box-shadow) var(--success-color-focus);
+    &:not(.disabled, :disabled) {
+      box-shadow: var(--box-shadow) var(--success-color-focus);
+    }
   }
 
   .bk-icon {
@@ -235,7 +245,7 @@
 
   &.hover:hover,
   .hover:hover {
-    &:not(.disabled) {
+    &:not(.disabled, :disabled) {
       background-color: var(--error-color-hover);
     }
   }
@@ -249,7 +259,9 @@
 
   .focus:focus,
   &.focus:focus {
-    box-shadow: var(--box-shadow) var(--error-color-focus);
+    &:not(.disabled, :disabled) {
+      box-shadow: var(--box-shadow) var(--error-color-focus);
+    }
   }
 
   .bk-icon {
@@ -266,7 +278,7 @@
 
   &.hover:hover,
   .hover:hover {
-    &:not(.disabled) {
+    &:not(.disabled, :disabled) {
       background-color: var(--warning-color-hover);
     }
   }
@@ -280,7 +292,9 @@
 
   .focus:focus,
   &.focus:focus {
-    box-shadow: var(--box-shadow) var(--warning-color-focus);
+    &:not(.disabled, :disabled) {
+      box-shadow: var(--box-shadow) var(--warning-color-focus);
+    }
   }
 
   .bk-icon {
@@ -297,7 +311,7 @@
 
   &.hover:hover,
   .hover:hover {
-    &:not(.disabled) {
+    &:not(.disabled, :disabled) {
       background-color: var(--info-color-hover);
     }
   }
@@ -311,12 +325,31 @@
 
   .focus:focus,
   &.focus:focus {
-    box-shadow: var(--box-shadow) var(--info-color-focus);
+    &:not(.disabled, :disabled) {
+      box-shadow: var(--box-shadow) var(--info-color-focus);
+    }
   }
 
   .bk-icon {
     & path.stroke {
       stroke: var(--info-color-text);
     }
+  }
+}
+
+.bk-primary,
+.bk-secondary,
+.bk-light,
+.bk-dark,
+.bk-success,
+.bk-error,
+.bk-warning,
+.bk-info {
+  .disabled,
+  :disabled,
+  &.disabled,
+  &:disabled {
+    @apply brightness-[0.80];
+    cursor: initial;
   }
 }
