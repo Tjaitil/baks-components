@@ -62,294 +62,297 @@
     --warning-color-text: var(--base-dark-text-color);
   }
 }
-.bk-primary,
-.bk-secondary,
-.bk-dark,
-.bk-light,
-.bk-success,
-.bk-error,
-.bk-warning,
-.bk-info {
-  font-family: sans-serif;
-  @apply border-2;
-}
 
-.bk-primary {
-  background-color: var(--primary-color);
-  color: var(--primary-color-text);
-  border-color: var(--primary-color-border);
+@layer components {
+  .bk-primary,
+  .bk-secondary,
+  .bk-dark,
+  .bk-light,
+  .bk-success,
+  .bk-error,
+  .bk-warning,
+  .bk-info {
+    font-family: sans-serif;
+    @apply border-2;
+  }
 
-  &.hover:hover,
-  .hover:hover {
-    &:not(.disabled, :disabled) {
-      background-color: var(--primary-color-hover);
+  .bk-primary {
+    background-color: var(--primary-color);
+    color: var(--primary-color-text);
+    border-color: var(--primary-color-border);
+
+    &.hover:hover,
+    .hover:hover {
+      &:not(.disabled, :disabled) {
+        background-color: var(--primary-color-hover);
+      }
     }
-  }
-  &.active-active,
-  .active-active,
-  &.is-selected,
-  .is-selected {
-    background-color: var(--primary-color-active);
-  }
-
-  .focus:focus,
-  &.focus:focus {
-    &:not(.disabled, :disabled) {
-      box-shadow: var(--box-shadow) var(--primary-color-focus);
+    &.active-active,
+    .active-active,
+    &.is-selected,
+    .is-selected {
+      background-color: var(--primary-color-active);
     }
-  }
 
-  .bk-icon {
-    & path.stroke {
-      stroke: var(--primary-color-text);
+    .focus:focus,
+    &.focus:focus {
+      &:not(.disabled, :disabled) {
+        box-shadow: var(--box-shadow) var(--primary-color-focus);
+      }
     }
-  }
-}
 
-.bk-secondary {
-  background-color: var(--secondary-color);
-  color: var(--secondary-color-text);
-  border-color: var(--secondary-color-border);
-
-  &.hover:hover,
-  .hover:hover {
-    &:not(.disabled, :disabled) {
-      background-color: var(--secondary-color-hover);
+    .bk-icon {
+      & path.stroke {
+        stroke: var(--primary-color-text);
+      }
     }
   }
 
-  &.active-active,
-  .active-active,
-  &.is-selected,
-  .is-selected {
-    background-color: var(--secondary-color-active);
-  }
+  .bk-secondary {
+    background-color: var(--secondary-color);
+    color: var(--secondary-color-text);
+    border-color: var(--secondary-color-border);
 
-  .focus:focus,
-  &.focus:focus {
-    &:not(.disabled, :disabled) {
-      box-shadow: var(--box-shadow) var(--secondary-color-focus);
+    &.hover:hover,
+    .hover:hover {
+      &:not(.disabled, :disabled) {
+        background-color: var(--secondary-color-hover);
+      }
+    }
+
+    &.active-active,
+    .active-active,
+    &.is-selected,
+    .is-selected {
+      background-color: var(--secondary-color-active);
+    }
+
+    .focus:focus,
+    &.focus:focus {
+      &:not(.disabled, :disabled) {
+        box-shadow: var(--box-shadow) var(--secondary-color-focus);
+      }
+    }
+
+    .bk-icon {
+      & path.stroke {
+        stroke: var(--secondary-color-text);
+      }
     }
   }
 
-  .bk-icon {
-    & path.stroke {
-      stroke: var(--secondary-color-text);
+  .bk-dark {
+    background-color: var(--dark-color);
+    color: var(--dark-color-text);
+    border-color: var(--dark-color-border);
+
+    &.hover:hover,
+    .hover:hover {
+      &:not(.disabled, :disabled) {
+        background-color: var(--dark-color-hover);
+      }
     }
-  }
-}
 
-.bk-dark {
-  background-color: var(--dark-color);
-  color: var(--dark-color-text);
-  border-color: var(--dark-color-border);
-
-  &.hover:hover,
-  .hover:hover {
-    &:not(.disabled, :disabled) {
-      background-color: var(--dark-color-hover);
+    &.active-active,
+    .active-active,
+    &.is-selected,
+    .is-selected {
+      background-color: var(--dark-color-active);
     }
-  }
 
-  &.active-active,
-  .active-active,
-  &.is-selected,
-  .is-selected {
-    background-color: var(--dark-color-active);
-  }
-
-  .focus:focus,
-  &.focus:focus {
-    &:not(.disabled, :disabled) {
-      box-shadow: var(--box-shadow) var(--dark-color-focus);
+    .focus:focus,
+    &.focus:focus {
+      &:not(.disabled, :disabled) {
+        box-shadow: var(--box-shadow) var(--dark-color-focus);
+      }
     }
-  }
 
-  .bk-icon {
-    & path.stroke {
-      stroke: var(--dark-color-text);
-    }
-  }
-}
-
-.bk-light {
-  background-color: var(--light-color);
-  color: var(--light-color-text);
-  border-color: var(--light-color-border);
-
-  &.hover:hover,
-  .hover:hover {
-    &:not(.disabled, :disabled) {
-      background-color: var(--light-color-hover);
+    .bk-icon {
+      & path.stroke {
+        stroke: var(--dark-color-text);
+      }
     }
   }
 
-  &.active-active,
-  .active-active,
-  &.is-selected,
-  .is-selected {
-    background-color: var(--light-color-active);
-  }
+  .bk-light {
+    background-color: var(--light-color);
+    color: var(--light-color-text);
+    border-color: var(--light-color-border);
 
-  .focus:focus,
-  &.focus:focus {
-    &:not(.disabled, :disabled) {
-      box-shadow: var(--box-shadow) var(--light-color-focus);
+    &.hover:hover,
+    .hover:hover {
+      &:not(.disabled, :disabled) {
+        background-color: var(--light-color-hover);
+      }
+    }
+
+    &.active-active,
+    .active-active,
+    &.is-selected,
+    .is-selected {
+      background-color: var(--light-color-active);
+    }
+
+    .focus:focus,
+    &.focus:focus {
+      &:not(.disabled, :disabled) {
+        box-shadow: var(--box-shadow) var(--light-color-focus);
+      }
+    }
+
+    .bk-icon {
+      & path.stroke {
+        stroke: var(--light-color-text);
+      }
     }
   }
 
-  .bk-icon {
-    & path.stroke {
-      stroke: var(--light-color-text);
+  .bk-success {
+    background-color: var(--success-color);
+    color: var(--success-color-text);
+    border-color: var(--success-color-border);
+
+    &.hover:hover,
+    .hover:hover {
+      &:not(.disabled, :disabled) {
+        background-color: var(--success-color-hover);
+      }
     }
-  }
-}
 
-.bk-success {
-  background-color: var(--success-color);
-  color: var(--success-color-text);
-  border-color: var(--success-color-border);
-
-  &.hover:hover,
-  .hover:hover {
-    &:not(.disabled, :disabled) {
-      background-color: var(--success-color-hover);
+    &.active-active,
+    .active-active,
+    &.is-selected,
+    .is-selected {
+      background-color: var(--success-color-active);
     }
-  }
 
-  &.active-active,
-  .active-active,
-  &.is-selected,
-  .is-selected {
-    background-color: var(--success-color-active);
-  }
-
-  .focus:focus,
-  &.focus:focus {
-    &:not(.disabled, :disabled) {
-      box-shadow: var(--box-shadow) var(--success-color-focus);
+    .focus:focus,
+    &.focus:focus {
+      &:not(.disabled, :disabled) {
+        box-shadow: var(--box-shadow) var(--success-color-focus);
+      }
     }
-  }
 
-  .bk-icon {
-    & path.stroke {
-      stroke: var(--success-color-text);
-    }
-  }
-}
-
-.bk-error {
-  background-color: var(--error-color);
-  color: var(--error-color-text);
-  border-color: var(--error-color-border);
-
-  &.hover:hover,
-  .hover:hover {
-    &:not(.disabled, :disabled) {
-      background-color: var(--error-color-hover);
+    .bk-icon {
+      & path.stroke {
+        stroke: var(--success-color-text);
+      }
     }
   }
 
-  &.active-active,
-  .active-active,
-  &.is-selected,
-  .is-selected {
-    background-color: var(--error-color-active);
-  }
+  .bk-error {
+    background-color: var(--error-color);
+    color: var(--error-color-text);
+    border-color: var(--error-color-border);
 
-  .focus:focus,
-  &.focus:focus {
-    &:not(.disabled, :disabled) {
-      box-shadow: var(--box-shadow) var(--error-color-focus);
+    &.hover:hover,
+    .hover:hover {
+      &:not(.disabled, :disabled) {
+        background-color: var(--error-color-hover);
+      }
+    }
+
+    &.active-active,
+    .active-active,
+    &.is-selected,
+    .is-selected {
+      background-color: var(--error-color-active);
+    }
+
+    .focus:focus,
+    &.focus:focus {
+      &:not(.disabled, :disabled) {
+        box-shadow: var(--box-shadow) var(--error-color-focus);
+      }
+    }
+
+    .bk-icon {
+      & path.stroke {
+        stroke: var(--error-color-text);
+      }
     }
   }
 
-  .bk-icon {
-    & path.stroke {
-      stroke: var(--error-color-text);
+  .bk-warning {
+    background-color: var(--warning-color);
+    color: var(--warning-color-text);
+    border-color: var(--warning-color-border);
+
+    &.hover:hover,
+    .hover:hover {
+      &:not(.disabled, :disabled) {
+        background-color: var(--warning-color-hover);
+      }
     }
-  }
-}
 
-.bk-warning {
-  background-color: var(--warning-color);
-  color: var(--warning-color-text);
-  border-color: var(--warning-color-border);
-
-  &.hover:hover,
-  .hover:hover {
-    &:not(.disabled, :disabled) {
-      background-color: var(--warning-color-hover);
+    &.active-active,
+    .active-active,
+    &.is-selected,
+    .is-selected {
+      background-color: var(--warning-color-active);
     }
-  }
 
-  &.active-active,
-  .active-active,
-  &.is-selected,
-  .is-selected {
-    background-color: var(--warning-color-active);
-  }
-
-  .focus:focus,
-  &.focus:focus {
-    &:not(.disabled, :disabled) {
-      box-shadow: var(--box-shadow) var(--warning-color-focus);
+    .focus:focus,
+    &.focus:focus {
+      &:not(.disabled, :disabled) {
+        box-shadow: var(--box-shadow) var(--warning-color-focus);
+      }
     }
-  }
 
-  .bk-icon {
-    & path.stroke {
-      stroke: var(--warning-color-text);
-    }
-  }
-}
-
-.bk-info {
-  background-color: var(--info-color);
-  color: var(--info-color-text);
-  border-color: var(--info-color-border);
-
-  &.hover:hover,
-  .hover:hover {
-    &:not(.disabled, :disabled) {
-      background-color: var(--info-color-hover);
+    .bk-icon {
+      & path.stroke {
+        stroke: var(--warning-color-text);
+      }
     }
   }
 
-  &.active-active,
-  .active-active,
-  &.is-selected,
-  .is-selected {
-    background-color: var(--info-color-active);
-  }
+  .bk-info {
+    background-color: var(--info-color);
+    color: var(--info-color-text);
+    border-color: var(--info-color-border);
 
-  .focus:focus,
-  &.focus:focus {
-    &:not(.disabled, :disabled) {
-      box-shadow: var(--box-shadow) var(--info-color-focus);
+    &.hover:hover,
+    .hover:hover {
+      &:not(.disabled, :disabled) {
+        background-color: var(--info-color-hover);
+      }
+    }
+
+    &.active-active,
+    .active-active,
+    &.is-selected,
+    .is-selected {
+      background-color: var(--info-color-active);
+    }
+
+    .focus:focus,
+    &.focus:focus {
+      &:not(.disabled, :disabled) {
+        box-shadow: var(--box-shadow) var(--info-color-focus);
+      }
+    }
+
+    .bk-icon {
+      & path.stroke {
+        stroke: var(--info-color-text);
+      }
     }
   }
 
-  .bk-icon {
-    & path.stroke {
-      stroke: var(--info-color-text);
+  .bk-primary,
+  .bk-secondary,
+  .bk-light,
+  .bk-dark,
+  .bk-success,
+  .bk-error,
+  .bk-warning,
+  .bk-info {
+    .disabled,
+    :disabled,
+    &.disabled,
+    &:disabled {
+      @apply brightness-[0.80];
+      cursor: initial;
     }
-  }
-}
-
-.bk-primary,
-.bk-secondary,
-.bk-light,
-.bk-dark,
-.bk-success,
-.bk-error,
-.bk-warning,
-.bk-info {
-  .disabled,
-  :disabled,
-  &.disabled,
-  &:disabled {
-    @apply brightness-[0.80];
-    cursor: initial;
   }
 }
