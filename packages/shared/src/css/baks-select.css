@@ -1,0 +1,130 @@
+@import url('./variant.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bk-select {
+    @apply min-w-36;
+    @apply rounded;
+  }
+
+  .bk-select .select-element {
+    @apply p-1.5;
+  }
+
+  .bk-select [role='listbox'] {
+    @apply py-1;
+    @apply z-10;
+    max-height: calc(100vh - 60px);
+    overflow-y: scroll;
+    @apply border-2;
+    @apply w-max;
+    @apply max-w-96;
+    @apply md:max-w-md;
+    @apply rounded-b;
+  }
+  
+
+  .bk-primary [role='listbox'] {
+     border-color: var(--primary-color-border);
+     background-color: var(--primary-color);
+    .listbox-item {
+      color: var(--primary-color-text);
+      &.is-highlighted {
+        background-color: var(--primary-color-hover);
+      }
+    }
+  }
+
+  .bk-secondary [role='listbox'] {
+    border-color: var(--secondary-color-border);
+    background-color: var(--secondary-color);
+    .listbox-item {
+      color: var(--secondary-color-text);
+      &.is-highlighted {
+        background-color: var(--secondary-color-hover);
+      }
+    }
+  }
+
+  .bk-success [role='listbox'] {
+    border-color: var(--success-color-border);
+    background-color: var(--success-color);
+    .listbox-item {
+      color: var(--success-color-text);
+      &.is-highlighted {
+        background-color: var(--success-color-hover);
+      }
+    }
+  }
+
+  .bk-error [role='listbox'] {
+    border-color: var(--error-color-border);
+    background-color: var(--error-color);
+    .listbox-item {
+      color: var(--error-color-text);
+      &.is-highlighted {
+        background-color: var(--error-color-hover);
+      }
+    }
+  }
+
+  .bk-warning [role='listbox'] {
+    border-color: var(--warning-color-border);
+    background-color: var(--warning-color);
+    .listbox-item {
+      color: var(--warning-color-text);
+      &.is-highlighted {
+        background-color: var(--warning-color-hover);
+      }
+    }
+  }
+
+  .bk-info [role='listbox'] {
+    border-color: var(--info-color-border);
+    background-color: var(--info-color);
+    .listbox-item {
+      color: var(--info-color-text);
+      &.is-highlighted {
+        background-color: var(--info-color-hover);
+      }
+    }
+  }
+
+  .bk-dark [role='listbox'] {
+    border-color: var(--dark-color-border);
+    background-color: var(--dark-color);
+    .listbox-item {
+      color: var(--dark-color-text);
+      &.is-highlighted {
+        background-color: var(--dark-color-hover);
+      }
+    }
+  }
+
+  .bk-light [role='listbox'] {
+    border-color: var(--light-color-border);
+    background-color: var(--light-color);
+    .listbox-item {
+      color: var(--light-color-text);
+      &.is-highlighted {
+        background-color: var(--light-color-hover);
+      }
+    }
+  }
+
+  .listbox-item {
+    @apply py-1;
+    cursor: pointer;
+  }
+
+  .checkmark-icon-wrapper {
+    @apply min-w-6;
+  }
+
+  .select-container {
+    @apply inline-block;
+    @apply relative;
+  }
+}
