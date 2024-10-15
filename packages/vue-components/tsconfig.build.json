@@ -2,6 +2,7 @@
     "compilerOptions": {
       "outDir": "dist",
       "declaration": true,
+      "skipLibCheck": true,
       "emitDeclarationOnly": true,
       "downlevelIteration": true,
       "paths": {
