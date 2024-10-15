@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.5.0...baks-components-vue@0.6.0) (2024-10-15)
+
+
+### Features
+
+* **baksSelect:** New select component ([#21](https://github.com/Tjaitil/baks-components/issues/21)) ([e2a8525](https://github.com/Tjaitil/baks-components/commit/e2a85257d94cd7d676484e0c2fc6ee00e6542649))
+
+
+
+
+
 # [0.5.0](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.4.3...baks-components-vue@0.5.0) (2024-10-03)
 
 

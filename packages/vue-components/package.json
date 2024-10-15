@@ -1,6 +1,6 @@
 {
   "name": "baks-components-vue",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": false,
   "type": "module",
   "main": "dist/index.js",
@@ -33,7 +33,7 @@
   "dependencies": {
     "@storybook/web-components-vite": "^8.0.9",
     "autoprefixer": "^10.4.19",
-    "baks-components-styles": "^0.2.2",
+    "baks-components-styles": "^0.3.0",
     "glob": "^10.3.12",
     "tailwindcss": "^3.4.3",
     "uuid": "^9.0.1",

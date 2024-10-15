@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/Tjaitil/baks-components/compare/baks-components-styles@0.2.2...baks-components-styles@0.3.0) (2024-10-15)
+
+
+### Bug Fixes
+
+* **variant:** invalid variable value for base-dark-text-color ([#13](https://github.com/Tjaitil/baks-components/issues/13)) ([25b1750](https://github.com/Tjaitil/baks-components/commit/25b1750f48f4b32c96b5f1bd39d57ad76391238a))
+
+
+### Features
+
+* **baks-select:** add styling for baks-select ([#20](https://github.com/Tjaitil/baks-components/issues/20)) ([46fa98c](https://github.com/Tjaitil/baks-components/commit/46fa98cccffe58070a7c8ff9cc9cb37289e6e20c))
+* **BaksButton:** add styles to components layer ([#18](https://github.com/Tjaitil/baks-components/issues/18)) ([9005f8f](https://github.com/Tjaitil/baks-components/commit/9005f8fabf3da5e024bb3b7936ff4284282bd9c0))
+* **variant:** add disabled styling ([#16](https://github.com/Tjaitil/baks-components/issues/16)) ([2fdad36](https://github.com/Tjaitil/baks-components/commit/2fdad3697f7794f58403490456587fe225ad8665))
+* **variant:** add focus styles based on variables ([#11](https://github.com/Tjaitil/baks-components/issues/11)) ([4b15670](https://github.com/Tjaitil/baks-components/commit/4b156701ff94fec1f3a1618b175c99daba7f9a69))
+* **variant:** add stroke color to path ([#12](https://github.com/Tjaitil/baks-components/issues/12)) ([355ba7b](https://github.com/Tjaitil/baks-components/commit/355ba7b916cff493ebd504c9d87ecb6ee455e529))
+* **variant:** add styling to components layer ([#17](https://github.com/Tjaitil/baks-components/issues/17)) ([c5f581a](https://github.com/Tjaitil/baks-components/commit/c5f581a219af2e092c4aa157185e9c046df155f2))
+
+
+
+
+
 ## [0.2.2](https://github.com/Tjaitil/baks-components/compare/baks-components-styles@0.2.1...baks-components-styles@0.2.2) (2024-08-09)
 
 **Note:** Version bump only for package baks-components-styles
