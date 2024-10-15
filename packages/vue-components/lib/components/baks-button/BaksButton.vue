@@ -2,7 +2,7 @@
   <button
     :type
     part="bk-button"
-    class="bk-button hover shadow-sm shadow-black px-6 py-1.5 cursor-pointer rounded min-w-24"
+    class="bk-button hover focus"
     :class="[resolveVariant(variant), { 'w-full': size === 'block', disabled: disabled }]"
   >
     <slot></slot>
