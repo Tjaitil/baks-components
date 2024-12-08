@@ -5,7 +5,7 @@
     ref="select-container"
   >
     <div
-      class="select-element cursor-pointer flex items-center justify-between focus gap-x-2"
+      class="select-element cursor-pointer flex items-center justify-between focus apply-variant gap-x-2"
       @click="toggleOpen"
       tabindex="0"
       :name="name"
@@ -225,6 +225,7 @@ watch(
 </script>
 
 <style>
+@import url('@shared/css/baks-select.css');
 .slide-fade-enter-active,
 .slide-fade-leave-active {
   transition: all 0.2s ease-out;

@@ -19,7 +19,7 @@
     max-height: calc(100vh - 60px);
     overflow-y: scroll;
     @apply border-2;
-    @apply w-max;
+    @apply w-full;
     @apply max-w-96;
     @apply md:max-w-md;
     @apply rounded-b;
