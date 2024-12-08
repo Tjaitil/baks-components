@@ -26,19 +26,26 @@
         </div>
       </button>
     </div>
-    <div
-      :id="accordionContentId"
-      class="bk-accordion-content overflow-y-hidden"
-      role="region"
-      :aria-labelledby="accordionId"
-      :style="{ height: `${height}px` }"
-      ref="contentWrapper"
-      part="bk-accordion-content"
+    <transition
+      :css="false"
+      @before-enter="beforeExpand"
+      @enter="onExpand"
+      @leave="beforeShrink"
     >
-      <div class="p-4" part="bk-accordion-content-inner">
-        <slot name="content"></slot>
+      <div
+        v-if="isExpanded"
+        :id="accordionContentId"
+        class="bk-accordion-content"
+        role="region"
+        :aria-labelledby="accordionId"
+        ref="contentWrapper"
+        part="bk-accordion-content"
+      >
+        <div class="p-4" part="bk-accordion-content-inner">
+          <slot name="content"></slot>
+        </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -58,7 +65,6 @@ const accordionId = uuidv4();
 const accordionContentId = uuidv4();
 
 const contentWrapper = ref<HTMLElement | null>(null);
-const height = ref(0);
 
 const isExpanded = ref<boolean>(props.isExpanded === 'true' || false);
 const handleKeyDown = (event: KeyboardEvent) => {
@@ -66,13 +72,23 @@ const handleKeyDown = (event: KeyboardEvent) => {
     toggleIsOpen();
   }
 };
+const beforeExpand = (el: Element) => {
+  let element = <HTMLElement>el;
+  element.style.height = '0px';
+  element.style.opacity = '0';
+}
+const onExpand = (el: Element, done: () => void) => {
+  let element = <HTMLElement>el;
+  element.style.height = `${element.scrollHeight}px`;
+  element.style.opacity = '1';
+}
+const beforeShrink = (el: Element, done: () => void) => {
+  let element = <HTMLElement>el;
+  element.style.height = '0px';
+  element.style.opacity = '0';
+}
 const toggleIsOpen = () => {
   isExpanded.value = !isExpanded.value;
-  if (isExpanded.value) {
-    height.value = contentWrapper.value?.scrollHeight || 0;
-  } else {
-    height.value = 0;
-  }
 };
 </script>
 
@@ -116,10 +132,9 @@ const toggleIsOpen = () => {
 }
 
 .bk-accordion-content {
-  transition: all 0.3s ease-out;
+  transition: all .3s ease;
 }
-
 .chevron-down {
-  transition: all 0.3s ease-out;
+  transition: all .3s ease-out;
 }
 </style>
