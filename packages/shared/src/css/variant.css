@@ -82,19 +82,19 @@
     border-color: var(--primary-color-border);
 
     &.hover:hover,
-    .hover:hover {
+    .apply-variant.hover:hover {
       &:not(.disabled, :disabled) {
         background-color: var(--primary-color-hover);
       }
     }
     &.active-active,
-    .active-active,
+    .apply-variant.active-active,
     &.is-selected,
-    .is-selected {
+    .apply-variant.is-selected {
       background-color: var(--primary-color-active);
     }
 
-    .focus:focus,
+    .apply-variant.focus:focus,
     &.focus:focus {
       &:not(.disabled, :disabled) {
         box-shadow: var(--box-shadow) var(--primary-color-focus);
@@ -114,20 +114,20 @@
     border-color: var(--secondary-color-border);
 
     &.hover:hover,
-    .hover:hover {
+    .apply-variant.hover:hover {
       &:not(.disabled, :disabled) {
         background-color: var(--secondary-color-hover);
       }
     }
 
     &.active-active,
-    .active-active,
+    .apply-variant.active-active,
     &.is-selected,
-    .is-selected {
+    .apply-variant.is-selected {
       background-color: var(--secondary-color-active);
     }
 
-    .focus:focus,
+    .apply-variant.focus:focus,
     &.focus:focus {
       &:not(.disabled, :disabled) {
         box-shadow: var(--box-shadow) var(--secondary-color-focus);
@@ -147,20 +147,20 @@
     border-color: var(--dark-color-border);
 
     &.hover:hover,
-    .hover:hover {
+    .apply-variant.hover:hover {
       &:not(.disabled, :disabled) {
         background-color: var(--dark-color-hover);
       }
     }
 
     &.active-active,
-    .active-active,
+    .apply-variant.active-active,
     &.is-selected,
-    .is-selected {
+    .apply-variant.is-selected {
       background-color: var(--dark-color-active);
     }
 
-    .focus:focus,
+    .apply-variant.focus:focus,
     &.focus:focus {
       &:not(.disabled, :disabled) {
         box-shadow: var(--box-shadow) var(--dark-color-focus);
@@ -180,20 +180,20 @@
     border-color: var(--light-color-border);
 
     &.hover:hover,
-    .hover:hover {
+    .apply-variant.hover:hover {
       &:not(.disabled, :disabled) {
         background-color: var(--light-color-hover);
       }
     }
 
     &.active-active,
-    .active-active,
+    .apply-variant.active-active,
     &.is-selected,
-    .is-selected {
+    .apply-variant.is-selected {
       background-color: var(--light-color-active);
     }
 
-    .focus:focus,
+    .apply-variant.focus:focus,
     &.focus:focus {
       &:not(.disabled, :disabled) {
         box-shadow: var(--box-shadow) var(--light-color-focus);
@@ -213,20 +213,20 @@
     border-color: var(--success-color-border);
 
     &.hover:hover,
-    .hover:hover {
+    .apply-variant.hover:hover {
       &:not(.disabled, :disabled) {
         background-color: var(--success-color-hover);
       }
     }
 
     &.active-active,
-    .active-active,
+    .apply-variant.active-active,
     &.is-selected,
-    .is-selected {
+    .apply-variant.is-selected {
       background-color: var(--success-color-active);
     }
 
-    .focus:focus,
+    .apply-variant.focus:focus,
     &.focus:focus {
       &:not(.disabled, :disabled) {
         box-shadow: var(--box-shadow) var(--success-color-focus);
@@ -246,20 +246,20 @@
     border-color: var(--error-color-border);
 
     &.hover:hover,
-    .hover:hover {
+    .apply-variant.hover:hover {
       &:not(.disabled, :disabled) {
         background-color: var(--error-color-hover);
       }
     }
 
     &.active-active,
-    .active-active,
+    .apply-variant.active-active,
     &.is-selected,
-    .is-selected {
+    .apply-variant.is-selected {
       background-color: var(--error-color-active);
     }
 
-    .focus:focus,
+    .apply-variant.focus:focus,
     &.focus:focus {
       &:not(.disabled, :disabled) {
         box-shadow: var(--box-shadow) var(--error-color-focus);
@@ -279,20 +279,20 @@
     border-color: var(--warning-color-border);
 
     &.hover:hover,
-    .hover:hover {
+    .apply-variant.hover:hover {
       &:not(.disabled, :disabled) {
         background-color: var(--warning-color-hover);
       }
     }
 
     &.active-active,
-    .active-active,
+    .apply-variant.active-active,
     &.is-selected,
-    .is-selected {
+    .apply-variant.is-selected {
       background-color: var(--warning-color-active);
     }
 
-    .focus:focus,
+    .apply-variant.focus:focus,
     &.focus:focus {
       &:not(.disabled, :disabled) {
         box-shadow: var(--box-shadow) var(--warning-color-focus);
@@ -311,21 +311,21 @@
     color: var(--info-color-text);
     border-color: var(--info-color-border);
 
-    &.hover:hover,
-    .hover:hover {
+    .apply-variant.hover:hover,
+    &.hover:hover {
       &:not(.disabled, :disabled) {
         background-color: var(--info-color-hover);
       }
     }
 
     &.active-active,
-    .active-active,
+    .apply-variant.active-active,
     &.is-selected,
-    .is-selected {
+    .apply-variant.is-selected {
       background-color: var(--info-color-active);
     }
 
-    .focus:focus,
+    .apply-variant.focus:focus,
     &.focus:focus {
       &:not(.disabled, :disabled) {
         box-shadow: var(--box-shadow) var(--info-color-focus);
