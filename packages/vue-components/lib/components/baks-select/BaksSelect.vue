@@ -1,6 +1,6 @@
 <template>
   <div
-    class="select-container bk-select shadow-sm shadow-black"
+    class="select-container bk-select shadow-xs shadow-black"
     :class="resolveVariant(variant)"
     ref="select-container"
   >
@@ -225,7 +225,8 @@ watch(
 </script>
 
 <style>
-@import url('@shared/css/baks-select.css');
+/* @import '../../../../shared/src/css/baks-select.css'; */
+@import url('./foo.css');
 .slide-fade-enter-active,
 .slide-fade-leave-active {
   transition: all 0.2s ease-out;

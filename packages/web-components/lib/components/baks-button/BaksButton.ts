@@ -52,7 +52,7 @@ export class BaksButton extends LitElement {
       type="${type}"
       class="${disabled ? 'disabled' : ''} ${size === 'block'
         ? 'w-full'
-        : ''} ${_variantClassName} bk-button hover shadow-sm shadow-black px-6 py-1.5 cursor-pointer rounded min-w-24"
+        : ''} ${_variantClassName} bk-button hover shadow-xs shadow-black px-6 py-1.5 cursor-pointer rounded-sm min-w-24"
     >
       <slot></slot>
     </button>`;
