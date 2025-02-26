@@ -225,8 +225,8 @@ watch(
 </script>
 
 <style>
-/* @import '../../../../shared/src/css/baks-select.css'; */
-@import url('./foo.css');
+@import '../../../../shared/src/css/baks-select.css';
+
 .slide-fade-enter-active,
 .slide-fade-leave-active {
   transition: all 0.2s ease-out;
