@@ -1,10 +1,11 @@
 import { html, LitElement, unsafeCSS } from 'lit';
 import style from 'baks-components-styles/src/css/baks-button.css?inline';
+import variant from 'baks-components-styles/src/css/variant.css?inline';
 import { customElement, property } from 'lit/decorators.js';
 
 @customElement('baks-button')
 export class BaksButton extends LitElement {
-  static styles = unsafeCSS(style);
+  static styles = unsafeCSS([style, variant]);
   static formAssociated = true;
   #internals;
 

@@ -1,4 +1,5 @@
-@import '../shared/src/css/variant.css';
+@import 'tailwindcss';
+@import '../../shared/src/css/variant.css';
 
 @source './src/**/*.{js,jsx,ts,tsx,vue,ce.vue}';
 @source './lib/**/*.{js,jsx,ts,tsx,vue,ce.vue}';
