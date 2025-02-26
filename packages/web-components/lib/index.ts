@@ -10,9 +10,9 @@ import BaksTabList from './components/baks-tabs/BaksTabsList.ce.vue';
 import css from './app.css?inline';
 export type { ThemeVariant as ThemeVariants } from 'baks-components-styles';
 
-console.log(css);
-
-const BaksCard = defineCustomElement(BaksCardCe);
+const BaksCard = defineCustomElement(BaksCardCe, {
+  'styles': [css]
+});
 const BaksAccordionCE = defineCustomElement(BaksAccordion, {
   'styles': [css
   ] 
