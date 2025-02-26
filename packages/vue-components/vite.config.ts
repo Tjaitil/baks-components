@@ -11,7 +11,7 @@ export default mergeConfig(rootConfig, defineConfig({
   },
   plugins: [
     vue(),
-    tailwindcss(),
+    tailwindcss()
   ],
   resolve: {
     alias: {
