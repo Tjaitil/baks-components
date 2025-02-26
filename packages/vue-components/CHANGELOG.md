@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.6.0...baks-components-vue@0.8.0) (2025-02-26)
+
+
+### Bug Fixes
+
+* **BaksAccordion:** fix an issue where overflowing content where hidden ([#24](https://github.com/Tjaitil/baks-components/issues/24)) ([081f54f](https://github.com/Tjaitil/baks-components/commit/081f54f0b60bd71a980dc2a72c5526dac3b61d29))
+
+
+### Features
+
+* **BaksSelect:** apply new apply-variant selector and fix missing import ([#23](https://github.com/Tjaitil/baks-components/issues/23)) ([7130c87](https://github.com/Tjaitil/baks-components/commit/7130c872a7afd0e5eed99c358a3d53f9196b6400))
+
+
+
+
+
 # [0.7.0](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.6.0...baks-components-vue@0.7.0) (2024-12-08)
 
 

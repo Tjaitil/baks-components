@@ -1,6 +1,6 @@
 {
   "name": "baks-components-web",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "private": false,
   "type": "module",
   "main": "dist/index.js",
@@ -33,7 +33,7 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.8",
     "@tailwindcss/vite": "^4.0.8",
-    "baks-components-styles": "^0.4.0",
+    "baks-components-styles": "^0.5.0",
     "glob": "^10.3.12",
     "lit": "^3.1.4",
     "tailwindcss": "^4.0.8",
