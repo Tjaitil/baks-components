@@ -1,6 +1,5 @@
-@layer base {
-  :host,
-  :root {
+@reference 'tailwindcss';
+@theme {
     --base-light-text-color: theme(colors.gray.50);
     --base-dark-text-color: #1f2937;
     --box-shadow: 0 0 3px 2px;
@@ -60,7 +59,6 @@
     --warning-color-active: theme(colors.yellow.600);
     --warning-color-border: theme(colors.yellow.600);
     --warning-color-text: var(--base-dark-text-color);
-  }
 }
 
 @layer components {

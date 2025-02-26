@@ -1,7 +1,4 @@
-@import url('./variant.css');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@reference './variant.css';
 .bk-tab {
   @apply min-w-16;
   @apply w-28;

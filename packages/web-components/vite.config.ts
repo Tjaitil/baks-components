@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import { defineConfig, mergeConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import rootConfig from '../../vite.config';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
 
@@ -11,6 +12,7 @@ export default mergeConfig(rootConfig, defineConfig({
     'process.env': {}
   },
   plugins: [
+    tailwindcss(),
     vue({
       customElement: true
     })

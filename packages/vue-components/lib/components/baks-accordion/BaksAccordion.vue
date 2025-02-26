@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bk-accordion shadow-sm shadow-black border-2 rounded relative"
+    class="bk-accordion shadow-xs shadow-black border-2 rounded-sm relative"
     :class="[resolveVariant(variant), { expanded: isExpanded }]"
     part="bk-accordion"
   >

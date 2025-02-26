@@ -1,10 +1,11 @@
 import { html, LitElement, unsafeCSS } from 'lit';
 import style from 'baks-components-styles/src/css/baks-button.css?inline';
+import variant from 'baks-components-styles/src/css/variant.css?inline';
 import { customElement, property } from 'lit/decorators.js';
 
 @customElement('baks-button')
 export class BaksButton extends LitElement {
-  static styles = unsafeCSS(style);
+  static styles = unsafeCSS([style, variant]);
   static formAssociated = true;
   #internals;
 
@@ -52,7 +53,7 @@ export class BaksButton extends LitElement {
       type="${type}"
       class="${disabled ? 'disabled' : ''} ${size === 'block'
         ? 'w-full'
-        : ''} ${_variantClassName} bk-button hover shadow-sm shadow-black px-6 py-1.5 cursor-pointer rounded min-w-24"
+        : ''} ${_variantClassName} bk-button hover shadow-xs shadow-black px-6 py-1.5 cursor-pointer rounded-sm min-w-24"
     >
       <slot></slot>
     </button>`;

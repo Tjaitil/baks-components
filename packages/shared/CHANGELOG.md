@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/Tjaitil/baks-components/compare/baks-components-styles@0.3.0...baks-components-styles@0.4.0) (2024-12-08)
+
+
+### Bug Fixes
+
+* **variant:** fix parent variant applying styles to child components ([#22](https://github.com/Tjaitil/baks-components/issues/22)) ([8d178b8](https://github.com/Tjaitil/baks-components/commit/8d178b801867f18a5fa5acfdcf2c1db4cfeba253))
+
+
+### Features
+
+* **BaksSelect:** apply new apply-variant selector and fix missing import ([#23](https://github.com/Tjaitil/baks-components/issues/23)) ([7130c87](https://github.com/Tjaitil/baks-components/commit/7130c872a7afd0e5eed99c358a3d53f9196b6400))
+
+
+
+
+
 # [0.3.0](https://github.com/Tjaitil/baks-components/compare/baks-components-styles@0.2.2...baks-components-styles@0.3.0) (2024-10-15)
 
 

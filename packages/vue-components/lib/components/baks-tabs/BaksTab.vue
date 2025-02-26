@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="bk-tab block text-center rounded hover min-w-16 w-28 p-3"
+    class="bk-tab block text-center rounded-sm hover min-w-16 w-28 p-3"
     :class="[resolveVariant(variant), { 'is-selected': isSelected }]"
     part="bk-tab"
     ref="element"

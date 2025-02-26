@@ -27,5 +27,5 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <style>
-@import url('@shared/css/baks-button.css');
+@import '../../../../shared/src/css/baks-button.css';
 </style>

@@ -7,14 +7,22 @@ import BaksAccordion from 'baks-components-vue/lib/components/baks-accordion/Bak
 import BaksTab from 'baks-components-vue/lib/components/baks-tabs/BaksTab.vue';
 import BaksTabPanel from 'baks-components-vue/lib/components/baks-tabs/BaksTabPanel.vue';
 import BaksTabList from './components/baks-tabs/BaksTabsList.ce.vue';
+import css from './app.css?inline';
 export type { ThemeVariant as ThemeVariants } from 'baks-components-styles';
 
-
-const BaksCard = defineCustomElement(BaksCardCe);
-const BaksAccordionCE = defineCustomElement(BaksAccordion);
-const BaksTabCE = defineCustomElement(BaksTab);
+const BaksCard = defineCustomElement(BaksCardCe, {
+  'styles': [css]
+});
+const BaksAccordionCE = defineCustomElement(BaksAccordion, {
+  'styles': [css
+  ] 
+});
+const BaksTabCE = defineCustomElement(BaksTab, {
+  'styles': [css]
+});
 const BaksTabListW = defineCustomElement(BaksTabList);
-const BaksTabPanelCe = defineCustomElement(BaksTabPanel);
+const BaksTabPanelCe = defineCustomElement(BaksTabPanel, {
+  'styles': [css]});
 
 export {
   BaksCard,

@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import { defineConfig, mergeConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import rootConfig from '../../vite.config';
+import tailwindcss from '@tailwindcss/vite';
 
 export default mergeConfig(rootConfig, defineConfig({
   define: {
@@ -10,6 +11,7 @@ export default mergeConfig(rootConfig, defineConfig({
   },
   plugins: [
     vue(),
+    tailwindcss()
   ],
   resolve: {
     alias: {
