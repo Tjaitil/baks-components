@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/Tjaitil/baks-components/compare/baks-components-web@0.3.3...baks-components-web@0.4.0) (2025-02-26)
+
+
+* build!: Bump vue v3.5 and tailwind v4 (#26) ([fa1a0b4](https://github.com/Tjaitil/baks-components/commit/fa1a0b4c5194e88c147618032e7b2fd757c7b515)), closes [#26](https://github.com/Tjaitil/baks-components/issues/26)
+
+
+### BREAKING CHANGES
+
+* Requires minimum vue 3.5 and tailwind v4 (missed in earlier commit)
+
+
+
+
+
 ## [0.3.3](https://github.com/Tjaitil/baks-components/compare/baks-components-web@0.3.1...baks-components-web@0.3.3) (2025-02-26)
 
 **Note:** Version bump only for package baks-components-web
