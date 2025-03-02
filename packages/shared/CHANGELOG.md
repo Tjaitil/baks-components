@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/Tjaitil/baks-components/compare/baks-components-styles@0.5.0...baks-components-styles@0.5.1) (2025-03-02)
+
+
+### Bug Fixes
+
+* **baks-components-styles:** tailwind reference and theme variables ([#27](https://github.com/Tjaitil/baks-components/issues/27)) ([db5a123](https://github.com/Tjaitil/baks-components/commit/db5a12348e641c34b5c1978ae5387f34ae0b9fb1))
+
+
+
+
+
 # [0.5.0](https://github.com/Tjaitil/baks-components/compare/baks-components-styles@0.3.0...baks-components-styles@0.5.0) (2025-02-26)
 
 
