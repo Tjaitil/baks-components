@@ -1,4 +1,4 @@
-@reference './variant.css';
+@reference 'baks-components-styles/src/css/variant.css';
 
 @layer components {
   .bk-button {

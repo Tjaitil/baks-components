@@ -1,4 +1,4 @@
-@reference './variant.css';
+@reference 'baks-components-styles/src/css/variant.css';
 .bk-tab {
   @apply min-w-16;
   @apply w-28;
