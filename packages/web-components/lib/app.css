@@ -4,4 +4,4 @@
 @source './src/**/*.{js,jsx,ts,tsx,vue,ce.vue}';
 @source './lib/**/*.{js,jsx,ts,tsx,vue,ce.vue}';
 @source './index.html';
-@source '../../node_modules/baks-components-vue/lib/components/**/*.{js,jsx,ts,tsx,vue,ce.vue}';
+@source '../../vue-components/lib/components/**/*.{js,jsx,ts,tsx,vue,ce.vue}';
