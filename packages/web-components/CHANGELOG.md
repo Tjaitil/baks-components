@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/Tjaitil/baks-components/compare/baks-components-web@0.4.1...baks-components-web@0.4.2) (2025-03-06)
+
+
+### Bug Fixes
+
+* **baks-components-web:** fix missing style from compiled stylesheet [#30](https://github.com/Tjaitil/baks-components/issues/30)  ([e45cb22](https://github.com/Tjaitil/baks-components/commit/e45cb2249f6fa048c367217c39226303fff92165))
+
+
+
+
+
 ## [0.4.1](https://github.com/Tjaitil/baks-components/compare/baks-components-web@0.4.0...baks-components-web@0.4.1) (2025-03-02)
 
 **Note:** Version bump only for package baks-components-web

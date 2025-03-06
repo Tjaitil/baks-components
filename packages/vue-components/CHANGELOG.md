@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.2](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.8.1...baks-components-vue@0.8.2) (2025-03-06)
+
+
+### Bug Fixes
+
+* **baks-components-vue:** prevent duplicate tailwind styling [#29](https://github.com/Tjaitil/baks-components/issues/29)  ([d64417a](https://github.com/Tjaitil/baks-components/commit/d64417a77cacc5258b64d2c635c78946c262fb0b))
+
+
+
+
+
 ## [0.8.1](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.8.0...baks-components-vue@0.8.1) (2025-03-02)
 
 **Note:** Version bump only for package baks-components-vue
