@@ -16,7 +16,3 @@ interface Props {
 }
 const props = defineProps<Props>();
 </script>
-
-<style>
-@import url('../../app.css');
-</style>
