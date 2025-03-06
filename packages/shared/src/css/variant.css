@@ -1,5 +1,5 @@
 @reference 'tailwindcss';
-@theme {
+@theme static {
     --base-light-text-color: var(--color-gray-50);
     --base-dark-text-color: #1f2937;
     --box-shadow: 0 0 3px 2px;
