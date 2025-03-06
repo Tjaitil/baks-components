@@ -22,7 +22,3 @@ const props = withDefaults(defineProps<Props>(), {
   isVisible: false
 });
 </script>
-
-<style>
-@import url('../../app.css');
-</style>
