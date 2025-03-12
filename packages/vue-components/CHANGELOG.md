@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.8.2...baks-components-vue@0.9.0) (2025-03-12)
+
+
+### Build System
+
+* add entrypoints and vite input ([#34](https://github.com/Tjaitil/baks-components/issues/34)) ([0d67366](https://github.com/Tjaitil/baks-components/commit/0d67366ac361eae1ffef4632c5fd88c552671a20))
+
+
+### BREAKING CHANGES
+
+* Imports from package needs to be updated
+
+
+
+
+
 ## [0.8.2](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.8.1...baks-components-vue@0.8.2) (2025-03-06)
 
 

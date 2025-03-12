@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/Tjaitil/baks-components/compare/baks-components-styles@0.5.2...baks-components-styles@0.6.0) (2025-03-12)
+
+
+* feat!: extract theme styling into own file (#32) ([e4834df](https://github.com/Tjaitil/baks-components/commit/e4834dfaa66a9d897258ba0432dbb4773b2e9efa)), closes [#32](https://github.com/Tjaitil/baks-components/issues/32)
+
+
+### BREAKING CHANGES
+
+* theme styling needs to be imported separetely
+
+
+
+
+
 ## [0.5.2](https://github.com/Tjaitil/baks-components/compare/baks-components-styles@0.5.1...baks-components-styles@0.5.2) (2025-03-06)
 
 **Note:** Version bump only for package baks-components-styles
