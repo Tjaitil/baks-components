@@ -1,0 +1,61 @@
+@theme {
+    --base-light-text-color: var(--color-gray-50);
+    --base-dark-text-color: #1f2937;
+    --box-shadow: 0 0 3px 2px;
+
+    --primary-color: var(--color-sky-500);
+    --primary-color-hover: var(--color-sky-600);
+    --primary-color-focus: var(--color-sky-600);
+    --primary-color-active: var(--color-sky-600);
+    --primary-color-border: var(--color-sky-600);
+    --primary-color-text: var(--base-light-text-color);
+
+    --secondary-color: var(--color-orange-600);
+    --secondary-color-hover: var(--color-orange-700);
+    --secondary-color-focus: var(--color-orange-700);
+    --secondary-color-active: var(--color-orange-700);
+    --secondary-color-border: var(--color-orange-700);
+    --secondary-color-text: var(--base-light-text-color);
+
+    --dark-color: var(--color-gray-600);
+    --dark-color-hover: var(--color-gray-700);
+    --dark-color-focus: var(--color-gray-700);
+    --dark-color-active: var(--color-gray-700);
+    --dark-color-border: var(--color-gray-700);
+    --dark-color-text: var(--base-light-text-color);
+
+    --light-color: var(--color-gray-200);
+    --light-color-hover: var(--color-gray-300);
+    --light-color-focus: var(--color-gray-300);
+    --light-color-active: var(--color-gray-300);
+    --light-color-border: var(--color-gray-300);
+    --light-color-text: var(--base-dark-text-color);
+
+    --success-color: var(--color-green-600);
+    --success-color-hover: var(--color-green-700);
+    --success-color-focus: var(--color-green-700);
+    --success-color-active: var(--color-green-700);
+    --success-color-border: var(--color-green-700);
+    --success-color-text: var(--base-light-text-color);
+
+    --error-color: var(--color-red-600);
+    --error-color-hover: var(--color-red-700);
+    --error-color-focus: var(--color-red-700);
+    --error-color-active: var(--color-red-700);
+    --error-color-border: var(--color-red-700);
+    --error-color-text: var(--base-light-text-color);
+
+    --info-color: var(--color-blue-500);
+    --info-color-hover: var(--color-blue-600);
+    --info-color-focus: var(--color-blue-600);
+    --info-color-active: var(--color-blue-600);
+    --info-color-border: var(--color-blue-600);
+    --info-color-text: var(--base-light-text-color);
+
+    --warning-color: var(--color-yellow-500);
+    --warning-color-hover: var(--color-yellow-600);
+    --warning-color-focus: var(--color-yellow-600);
+    --warning-color-active: var(--color-yellow-600);
+    --warning-color-border: var(--color-yellow-600);
+    --warning-color-text: var(--base-dark-text-color);
+}
