@@ -19,6 +19,7 @@ export default mergeConfig(rootConfig, defineConfig({
     }
   },
   build: {
+    cssCodeSplit: true,
     copyPublicDir: false,
     lib: {
       entry: resolve(__dirname, 'lib/index.ts'),
@@ -33,6 +34,10 @@ export default mergeConfig(rootConfig, defineConfig({
         entryFileNames(chunkInfo) {
           return `${chunkInfo.name}.js`;
         }
+      },
+      input: {
+        'index': resolve(__dirname, 'lib/index.ts'),
+        'themes/default.css': '@shared/css/themes/default.css',
       }
     }
   }

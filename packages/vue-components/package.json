@@ -15,6 +15,12 @@
     "type": "git",
     "url": "git+https://github.com/Tjaitil/baks-components.git"
   },
+  "exports": {
+    ".": "./dist/index.js",
+    "./style.css": "./dist/index.css",
+    "./themes/default.css": "./dist/themes/default.css",
+    "./lib/*": "./lib/*"
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" -- && npm run types",
