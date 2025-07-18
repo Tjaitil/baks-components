@@ -26,12 +26,7 @@
         </div>
       </button>
     </div>
-    <transition
-      :css="false"
-      @before-enter="beforeExpand"
-      @enter="onExpand"
-      @leave="beforeShrink"
-    >
+    <transition :css="false" @before-enter="beforeExpand" @enter="onExpand" @leave="beforeShrink">
       <div
         v-if="isExpanded"
         :id="accordionContentId"
@@ -52,8 +47,7 @@
 <script setup lang="ts">
 import { type ThemeVariant, resolveVariant } from 'baks-components-styles';
 import ChevronDown from '../Icons/ChevronDown.vue';
-import { v4 as uuidv4 } from 'uuid';
-import { ref } from 'vue';
+import { ref, useId } from 'vue';
 interface Props {
   variant: ThemeVariant;
   isExpanded?: string;
@@ -61,8 +55,8 @@ interface Props {
 
 const props = defineProps<Props>();
 
-const accordionId = uuidv4();
-const accordionContentId = uuidv4();
+const accordionId = useId();
+const accordionContentId = useId();
 
 const contentWrapper = ref<HTMLElement | null>(null);
 
@@ -76,17 +70,17 @@ const beforeExpand = (el: Element) => {
   let element = <HTMLElement>el;
   element.style.height = '0px';
   element.style.opacity = '0';
-}
+};
 const onExpand = (el: Element, done: () => void) => {
   let element = <HTMLElement>el;
   element.style.height = `${element.scrollHeight}px`;
   element.style.opacity = '1';
-}
+};
 const beforeShrink = (el: Element, done: () => void) => {
   let element = <HTMLElement>el;
   element.style.height = '0px';
   element.style.opacity = '0';
-}
+};
 const toggleIsOpen = () => {
   isExpanded.value = !isExpanded.value;
 };
@@ -131,9 +125,9 @@ const toggleIsOpen = () => {
 }
 
 .bk-accordion-content {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .chevron-down {
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 </style>

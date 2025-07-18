@@ -43,7 +43,6 @@
     "baks-components-styles": "^0.6.0",
     "glob": "^10.3.12",
     "tailwindcss": "^4.1.11",
-    "uuid": "^9.0.1",
     "vite-plugin-dts": "^3.9.0",
     "vue": "^3.4.26"
   },
