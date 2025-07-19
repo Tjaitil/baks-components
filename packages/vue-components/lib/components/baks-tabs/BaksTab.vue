@@ -39,9 +39,8 @@ watch(
 );
 
 const element = ref<HTMLElement | null>(null);
-
 </script>
 
 <style>
-@import url('@shared/css/baks-tab.css');
+@import '../../../../shared/src/css/baks-tab.css';
 </style>
