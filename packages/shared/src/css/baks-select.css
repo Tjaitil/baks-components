@@ -1,4 +1,4 @@
-@reference 'baks-components-styles/src/css/variant.css';
+@reference 'tailwindcss';
 
 @layer components {
   .bk-select {
