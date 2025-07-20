@@ -1,1 +1,3 @@
 @import url('../../shared/src/css/variant.css');
+
+@source '../dist';
