@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/web-components';
-import { expect, userEvent, within } from '@storybook/test';
+import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { expect, userEvent, within } from 'storybook/test';
 import { html } from 'lit';
 import { variantsOptions } from 'baks-components-styles';
 

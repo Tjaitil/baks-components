@@ -5,7 +5,7 @@ import { customElement, property } from 'lit/decorators.js';
 
 @customElement('baks-button')
 export class BaksButton extends LitElement {
-  static styles = unsafeCSS([style, variant]);
+  static styles = unsafeCSS(style + variant);
   static formAssociated = true;
   #internals;
 

@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/web-components';
+import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { register } from '../../';
 
 import { html } from 'lit';
 import { variantsOptions } from 'baks-components-styles';
-import { expect, within } from '@storybook/test';
+import { expect, within } from 'storybook/test';
 
 const meta: Meta = {
   component: 'baks-button',
