@@ -1,8 +1,9 @@
 {
-  "name": "baks-components",
+  "name": "baks-components-playground",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages-private/*"
   ],
   "type": "module",
   "description": "Monorepo for Baks Components",
