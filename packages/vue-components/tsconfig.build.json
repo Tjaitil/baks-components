@@ -1,13 +1,22 @@
 {
-    "compilerOptions": {
-      "outDir": "dist",
-      "declaration": true,
-      "skipLibCheck": true,
-      "emitDeclarationOnly": true,
-      "downlevelIteration": true,
-      "paths": {
-        "@/*": ["./lib/*"]
-      }
-    },
-    "include": ["lib/**/*", "lib/**/*.vue", "lib/**/*.ce.vue"]
-  }
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "skipLibCheck": true,
+    "emitDeclarationOnly": true,
+    "downlevelIteration": true,
+    "paths": {
+      "@/*": [
+        "./lib/*"
+      ]
+    }
+  },
+  "include": [
+    "lib/**/*",
+    "lib/**/*.vue",
+    "lib/**/*.ce.vue"
+  ],
+  "exclude": [
+    "**/*.stories.ts"
+  ]
+}
