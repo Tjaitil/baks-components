@@ -3,8 +3,16 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["lib/*"]
-    }
+      "@/*": [
+        "lib/*"
+      ]
+    },
+    "declaration": false,
+    "composite": false
   },
-  "include": ["lib/**/*.ts", "lib/**/*.vue", "src/**/*"]
+  "include": [
+    "lib/**/*.ts",
+    "lib/**/*.vue",
+    "src/**/*"
+  ]
 }
