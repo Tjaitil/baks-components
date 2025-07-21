@@ -1,5 +1,5 @@
-
 @import 'tailwindcss';
+@import '../shared/src/css/themes/default.css';
 @import '../shared/src/css/variant.css';
 
 @source '../shared/src/css/variant.css';
