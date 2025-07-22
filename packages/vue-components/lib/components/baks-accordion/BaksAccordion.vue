@@ -6,15 +6,15 @@
   >
     <div class="bk-accordion-header" part="bk-accordion-header">
       <button
+        :id="accordionId"
+        type="button"
+        :aria-expanded="isExpanded"
+        :aria-controls="accordionContentId"
+        class="accordion-trigger block w-full p-4 focus cursor-pointer"
         @click="toggleIsOpen"
         @keydown="handleKeyDown"
         @keyup.enter="toggleIsOpen"
         @keyup.space="toggleIsOpen"
-        :id="accordionId"
-        type="button"
-        :aria-expanded="isExpanded"
-        class="accordion-trigger block w-full p-4 focus cursor-pointer"
-        :aria-controls="accordionContentId"
       >
         <div class="flex flex-row items-center gap-2">
           <slot name="header"></slot>
@@ -30,11 +30,11 @@
       <div
         v-if="isExpanded"
         :id="accordionContentId"
-        class="bk-accordion-content"
+        ref="contentWrapper"
         role="region"
         :aria-labelledby="accordionId"
-        ref="contentWrapper"
         part="bk-accordion-content"
+        class="bk-accordion-content"
       >
         <div class="p-4" part="bk-accordion-content-inner">
           <slot name="content"></slot>
@@ -67,19 +67,22 @@ const handleKeyDown = (event: KeyboardEvent) => {
   }
 };
 const beforeExpand = (el: Element) => {
-  let element = <HTMLElement>el;
-  element.style.height = '0px';
-  element.style.opacity = '0';
+  if (el instanceof HTMLElement) {
+    el.style.height = '0px';
+    el.style.opacity = '0';
+  }
 };
-const onExpand = (el: Element, done: () => void) => {
-  let element = <HTMLElement>el;
-  element.style.height = `${element.scrollHeight}px`;
-  element.style.opacity = '1';
+const onExpand = (el: Element) => {
+  if (el instanceof HTMLElement) {
+    el.style.height = `${el.scrollHeight.toString()}px`;
+    el.style.opacity = '1';
+  }
 };
-const beforeShrink = (el: Element, done: () => void) => {
-  let element = <HTMLElement>el;
-  element.style.height = '0px';
-  element.style.opacity = '0';
+const beforeShrink = (el: Element) => {
+  if (el instanceof HTMLElement) {
+    el.style.height = '0px';
+    el.style.opacity = '0';
+  }
 };
 const toggleIsOpen = () => {
   isExpanded.value = !isExpanded.value;
