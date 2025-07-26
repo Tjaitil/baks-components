@@ -16,6 +16,7 @@
     "lib/**/*.vue",
     "src/**/*",
     "vitest.config.ts",
-    "vite.config.ts"
+    "vite.config.ts",
+    "../../vite.config.ts"
   ]
 }
