@@ -1,55 +1,50 @@
 <template>
   <div
-    ref="select-container"
     class="select-container bk-select shadow-xs shadow-black"
     :class="resolveVariant(variant)"
+    ref="select-container"
   >
-    <button
-      :id
-      ref="select-element"
-      class="select-element cursor-pointer flex items-center justify-between focus apply-variant gap-x-2 w-full"
+    <div
+      class="select-element cursor-pointer flex items-center justify-between focus apply-variant gap-x-2"
+      @click="toggleOpen"
       tabindex="0"
       :name="name"
       role="combobox"
-      :aria-label="selectLabel"
-      :aria-labelledby="props['aria-labelledby']"
-      :aria-activedescendant="isOpen ? `${id}-option-${currentIndex}` : undefined"
+      aria-label="Select"
       :aria-expanded="isOpen"
       aria-haspopup="listbox"
       :aria-controls="listboxId"
       :aria-disabled="isDisabled"
       :class="{ disabled: isDisabled }"
-      @click="toggleOpen"
       @keydown.prevent="handleKeyPress"
+      ref="select-element"
     >
-      <span class="select-none text-ellipsis overflow-hidden max-h-16">{{
-        selectedOption != undefined ? selectedOption.label : props.selectLabel
-      }}</span>
+      <span class="select-none text-ellipsis overflow-hidden max-h-16">{{ getSelectedLabel }}</span>
       <span class="select-none">
         <slot name="baks-select-icon">
           <ChevronDown class="stroke" />
         </slot>
       </span>
-    </button>
+    </div>
     <Transition name="slide-fade">
       <div
         v-if="isOpen"
-        :id="listboxId"
-        ref="listbox"
         class="absolute listbox-container"
+        :id="listboxId"
         role="listbox"
+        ref="listbox"
       >
         <div
           v-for="(option, index) in options"
-          :id="`${id}-option-${index}`"
           :key="option.value"
+          :value="option.value"
           class="flex listbox-item gap-x-2"
           :class="{ 'is-highlighted': currentIndex === index }"
-          :aria-labelledby="props['aria-labelledby']"
-          :aria-selected="selected === option.value"
-          role="option"
+          :aria-activedescendant="index.toString()"
+          :aria-selected="currentIndex === index"
           @click="setSelectedOption(option.value)"
           @mouseenter="currentIndex = index"
+          role="option"
         >
           <span class="checkmark-icon-wrapper">
             <slot name="checkmark icon">
@@ -76,33 +71,39 @@ import { isClippingOutside } from '@/lib/isClippingOutside';
 interface Option {
   value: string | number;
   label: string | number;
+  [key: string]: any;
 }
 
 interface Props {
-  id: string;
-  // eslint-disable-next-line vue/prop-name-casing
-  'aria-labelledby': string;
   name: string;
   variant: ThemeVariant;
   options: Option[];
+  includeEmptyOption?: boolean;
   selectLabel?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  selectLabel: 'Select'
+  includeEmptyOption: false
 });
-
 const attrs = useAttrs();
 const isDisabled = computed(() => attrs.disabled != null);
 
 const isOpen = ref(false);
 const selected = defineModel<Option['value'] | null>();
-const selectedOption = computed(() =>
+const resolveInitialSelected = () => {
+  if (props.includeEmptyOption) {
+    return null;
+  }
+  return props.options[0].value;
+};
+const selecedOption = computed(() =>
   props.options.find((option) => option.value === selected.value)
 );
+selected.value = resolveInitialSelected();
 
 const listboxId = useId();
-const listboxElement = useTemplateRef<HTMLElement>('listbox');
+const listbox = useTemplateRef<HTMLElement>('listbox');
+const selectElement = useTemplateRef<HTMLElement>('select-element');
 const selectElementContainer = useTemplateRef<HTMLElement>('select-container');
 onClickOutside(selectElementContainer, () => {
   isOpen.value = false;
@@ -113,10 +114,18 @@ const setSelectedOption = (key: Option['value']) => {
   isOpen.value = false;
 };
 const setSelectedOptionFromIndex = () => {
-  setSelectedOption(props.options[currentIndex.value].value);
+  setSelectedOption(props.options[currentIndex.value].label);
 };
 
-const toggleOpen = (e: MouseEvent) => {
+const getSelectedLabel = computed(() => {
+  if (selecedOption.value != null) {
+    return selecedOption.value.label;
+  } else if (props.selectLabel) {
+    return props.selectLabel;
+  }
+  return 'Select';
+});
+const toggleOpen = () => {
   if (isDisabled.value) return;
   isOpen.value = !isOpen.value;
 };
@@ -179,14 +188,15 @@ const handleKeyPress = (event: KeyboardEvent) => {
 };
 
 const handleScroll = () => {
-  const element = listboxElement.value?.children[currentIndex.value];
-  if (element instanceof HTMLElement) {
-    const { isOutside, isClippingTop, isClippingBottom } = isClippingOutside(
+  const element = <HTMLElement>listbox.value?.children[currentIndex.value];
+  if (element) {
+    const { isOutside, isClippingTop, isClippingBottom, sides } = isClippingOutside(
       element,
-      listboxElement.value
+      listbox.value
     );
     if (isOutside && (isClippingTop || isClippingBottom)) {
       element.scrollIntoView({ block: 'nearest' });
+    } else {
     }
   }
 };
@@ -195,17 +205,17 @@ watch(
   () => isOpen.value,
   (newVal) => {
     if (newVal) {
-      void nextTick(() => {
-        if (listboxElement.value == undefined) return;
+      nextTick(() => {
+        if (listbox.value == undefined) return;
         const { isOutside, isClippingRight, isClippingBottom, sides } = isClippingOutside(
-          listboxElement.value
+          listbox.value
         );
         if (isOutside) {
           if (isClippingRight) {
-            listboxElement.value.style.left = `-${sides.right.toString()}px`;
+            listbox.value.style.left = `-${sides.right}px`;
           }
           if (isClippingBottom) {
-            listboxElement.value.style.top = `-${sides.bottom.toString()}px`;
+            listbox.value.style.top = `-${sides.bottom}px`;
           }
         }
       });
