@@ -251,7 +251,7 @@ describe('BaksSelect', () => {
       { value: 'cherry', label: 'Cherry' }
     ];
 
-    const props = { ...defaultProps, options, modelValuew: 'apple' };
+    const props = { ...defaultProps, options, modelValue: 'apple' };
     render(BaksSelect, { props });
 
     const selectElement = screen.getByRole('combobox');
