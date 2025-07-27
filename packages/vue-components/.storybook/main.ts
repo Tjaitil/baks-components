@@ -14,7 +14,9 @@ const config: StorybookConfig = {
   addons: [getAbsolutePath('@storybook/addon-docs')],
   framework: {
     name: getAbsolutePath('@storybook/vue3-vite'),
-    options: {}
+    options: {
+      docgen: 'vue-component-meta'
+    }
   }
 };
 export default config;
