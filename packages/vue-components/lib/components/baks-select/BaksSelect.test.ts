@@ -203,7 +203,9 @@ describe('BaksSelect', () => {
         return { selected, options: defaultOptions };
       },
       template: `
-        <BaksSelect v-model="selected" :options="options" name="test-select" variant="primary" selectLabel="Choose an option" />
+        <label for="test-select" id="test-select-label">Test Select</label>
+        <BaksSelect v-model="selected" :options="options" name="test-select" variant="primary" selectLabel="Choose an option"
+          aria-labelledby="test-select-label" />
         <span data-testid="selected">{{ selected }}</span>
       `
     });
