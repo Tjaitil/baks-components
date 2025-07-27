@@ -27,28 +27,6 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const SingleTab: Story = {
-  render: (args) => ({
-    components: { BaksTab },
-    setup() {
-      return { args };
-    },
-    template: `
-      <BaksTab 
-        v-bind="args"
-      >
-        Tab 1
-      </BaksTab>
-    `
-  }),
-  args: {
-    variant: 'primary',
-    tabGroup: 'example',
-    controls: 'panel-1',
-    selected: true
-  }
-};
-
 export const TabsWithPanels: Story = {
   render: (args) => ({
     components: { BaksTab, BaksTabPanel },
