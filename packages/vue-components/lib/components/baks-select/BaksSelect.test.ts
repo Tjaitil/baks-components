@@ -204,7 +204,7 @@ describe('BaksSelect', () => {
       },
       template: `
         <label for="test-select" id="test-select-label">Test Select</label>
-        <BaksSelect v-model="selected" :options="options" name="test-select" variant="primary" selectLabel="Choose an option"
+        <BaksSelect v-model="selected" :options="options" id="test-select" name="test-select" variant="primary" selectLabel="Choose an option"
           aria-labelledby="test-select-label" />
         <span data-testid="selected">{{ selected }}</span>
       `
