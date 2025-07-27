@@ -12,6 +12,10 @@ const meta = {
       control: { type: 'select' },
       options: ['primary', 'secondary', 'dark', 'light', 'warning', 'success', 'error', 'info'],
       defaultValue: 'primary'
+    },
+    default: {
+      control: { type: 'text' },
+      description: 'Default slot content for the tab'
     }
   },
   args: {

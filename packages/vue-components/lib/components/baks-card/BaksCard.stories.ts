@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite';
 
 import BaksCard from './BaksCard.vue';
+import BaksButton from '../baks-button/BaksButton.vue';
 
 const meta = {
   component: BaksCard,
@@ -10,10 +11,11 @@ const meta = {
       control: { type: 'select' },
       options: ['primary', 'secondary', 'dark', 'light', 'warning', 'success', 'error', 'info'],
       defaultValue: 'primary'
+    },
+    default: {
+      control: { type: 'text' },
+      description: 'Default slot content for the card'
     }
-  },
-  args: {
-    variant: 'primary'
   }
 } satisfies Meta<typeof BaksCard>;
 
@@ -59,7 +61,7 @@ export const Secondary: Story = {
 
 export const WithComplexContent: Story = {
   render: (args) => ({
-    components: { BaksCard },
+    components: { BaksCard, BaksButton },
     setup() {
       return { args };
     },
@@ -74,8 +76,8 @@ export const WithComplexContent: Story = {
             <li>Feature 3</li>
           </ul>
           <div class="flex gap-2">
-            <button class="px-4 py-2 bg-blue-500 text-white rounded">Action 1</button>
-            <button class="px-4 py-2 bg-gray-500 text-white rounded">Action 2</button>
+            <BaksButton variant="primary">Primary Action</BaksButton>
+            <BaksButton variant="secondary">Secondary Action</BaksButton>
           </div>
         </div>
       </BaksCard>
@@ -87,6 +89,9 @@ export const WithComplexContent: Story = {
 };
 
 export const AllVariants: Story = {
+  args: {
+    variant: 'primary'
+  },
   render: () => ({
     components: { BaksCard },
     template: `

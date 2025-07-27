@@ -44,6 +44,14 @@ const meta = {
     options: {
       control: { type: 'object' },
       defaultValue: sampleOptions
+    },
+    'baks-select-icon': {
+      control: { type: 'text' },
+      description: 'Icon to display in the select dropdown'
+    },
+    'checkmark icon': {
+      control: { type: 'text' },
+      description: 'Icon to display as the checkmark'
     }
   },
   args: {

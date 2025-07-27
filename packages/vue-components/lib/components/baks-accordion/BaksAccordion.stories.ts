@@ -15,6 +15,18 @@ const meta = {
       control: { type: 'select' },
       options: ['true', 'false'],
       defaultValue: 'false'
+    },
+    header: {
+      control: { type: 'text' },
+      description: 'Default slot content for the accordion'
+    },
+    icon: {
+      control: { type: 'text' },
+      description: 'Icon to display in the accordion header'
+    },
+    content: {
+      control: { type: 'text' },
+      description: 'Content to display inside the accordion'
     }
   },
   args: {
