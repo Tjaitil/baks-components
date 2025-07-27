@@ -29,9 +29,13 @@ const meta = {
       control: { type: 'text' },
       defaultValue: 'example-select'
     },
-    includeEmptyOption: {
-      control: { type: 'boolean' },
-      defaultValue: false
+    id: {
+      control: { type: 'text' },
+      defaultValue: 'example-select-id'
+    },
+    'aria-labelledby': {
+      control: { type: 'text' },
+      defaultValue: 'example-select-label'
     },
     selectLabel: {
       control: { type: 'text' },
@@ -46,7 +50,6 @@ const meta = {
     name: 'example-select',
     variant: 'primary',
     options: sampleOptions,
-    includeEmptyOption: false,
     selectLabel: 'Choose an option'
   }
 } satisfies Meta<typeof BaksSelect>;
@@ -64,22 +67,9 @@ export const Primary: Story = {
     template: `<BaksSelect v-bind="args" />`
   }),
   args: {
+    id: 'primary-select',
+    'aria-labelledby': 'primary-select-label',
     variant: 'primary'
-  }
-};
-
-export const WithEmptyOption: Story = {
-  render: (args) => ({
-    components: { BaksSelect },
-    setup() {
-      return { args };
-    },
-    template: `<BaksSelect v-bind="args" />`
-  }),
-  args: {
-    variant: 'primary',
-    includeEmptyOption: true,
-    selectLabel: 'Select an option...'
   }
 };
 
@@ -88,7 +78,6 @@ export const CustomLabel: Story = {
     components: { BaksSelect },
     setup() {
       const model = ref(args.modelValue);
-      console.log(model.value);
       // Optional: Keeps v-model in sync with storybook args
       watch(
         () => args.modelValue,
@@ -102,6 +91,8 @@ export const CustomLabel: Story = {
     template: `<BaksSelect v-bind="args" v-model="model" />`
   }),
   args: {
+    id: 'custom-label-select',
+    'aria-labelledby': 'custom-label-select-label',
     modelValue: 'burger',
     variant: 'secondary',
     selectLabel: 'Pick your favorite',
@@ -123,6 +114,8 @@ export const ManyOptions: Story = {
     template: `<BaksSelect v-bind="args" />`
   }),
   args: {
+    id: 'many-options-select',
+    'aria-labelledby': 'many-options-select-label',
     variant: 'info',
     selectLabel: 'Select from many options',
     options: manyOptions
@@ -138,12 +131,21 @@ export const Disabled: Story = {
     template: `<BaksSelect v-bind="args" disabled />`
   }),
   args: {
+    id: 'disabled-select',
+    'aria-labelledby': 'disabled-select-label',
     variant: 'primary',
     selectLabel: 'Disabled select'
   }
 };
 
 export const AllVariants: Story = {
+  args: {
+    variant: 'primary',
+    name: 'all-variants-select',
+    selectLabel: 'Select variant',
+    id: 'all-variants-select-id',
+    'aria-labelledby': 'all-variants-select-label'
+  },
   render: () => ({
     components: { BaksSelect },
     setup() {
