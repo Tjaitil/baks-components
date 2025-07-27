@@ -21,7 +21,4 @@
     "vite.config.ts",
     "../../vite.config.ts"
   ],
-  "exclude": [
-    "lib/**/*.stories.ts",
-  ]
 }
