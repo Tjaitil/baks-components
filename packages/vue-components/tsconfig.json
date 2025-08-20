@@ -7,10 +7,12 @@
         "lib/*"
       ]
     },
-    "types": [
-      "vitest/globals"
-    ]
+    "declaration": false,
+    "composite": false
   },
+  "types": [
+    "vitest/globals"
+  ],
   "include": [
     "lib/**/*.ts",
     "lib/**/*.vue",
@@ -18,5 +20,5 @@
     "vitest.config.ts",
     "vite.config.ts",
     "../../vite.config.ts"
-  ]
+  ],
 }

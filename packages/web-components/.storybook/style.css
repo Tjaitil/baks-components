@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+@import '../../shared/src/css/themes/default.css';
+@import '../../shared/src/css/variant.css';
+
+@source './src/**/*.{js,jsx,ts,tsx,vue,ce.vue}';
+@source './lib/**/*.{js,jsx,ts,tsx,vue,ce.vue}';
+@source './index.html';
+@source '../../vue-components/lib/components/**/*.{js,jsx,ts,tsx,vue,ce.vue}';

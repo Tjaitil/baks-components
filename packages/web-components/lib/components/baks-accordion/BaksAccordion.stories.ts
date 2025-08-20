@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/web-components';
-import { register } from '../../';
+import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { BaksAccordion, register } from '../../';
 
 import { html } from 'lit';
 import { variantsOptions } from 'baks-components-styles';
 
-const meta: Meta = {
+const meta = {
   component: 'baks-accordion',
   argTypes: {
     variant: {
@@ -18,7 +18,7 @@ const meta: Meta = {
       control: { type: 'text' }
     }
   }
-};
+} satisfies Meta<typeof BaksAccordion>;
 
 export default meta;
 type Story = StoryObj;
