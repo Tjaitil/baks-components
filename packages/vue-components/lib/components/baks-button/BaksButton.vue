@@ -12,12 +12,12 @@
 <script setup lang="ts">
 import { type ThemeVariant, resolveVariant } from 'baks-components-styles';
 
-interface Props {
+type Props = {
   type?: 'button' | 'submit' | 'reset';
   variant: ThemeVariant;
   size?: 'normal' | 'block';
   disabled?: boolean;
-}
+};
 
 const props = withDefaults(defineProps<Props>(), {
   type: 'button',

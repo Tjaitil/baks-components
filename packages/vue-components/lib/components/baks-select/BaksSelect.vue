@@ -78,7 +78,7 @@ interface Option {
   label: string | number;
 }
 
-interface Props {
+type Props = {
   id: string;
   // eslint-disable-next-line vue/prop-name-casing
   'aria-labelledby': string;
@@ -86,7 +86,7 @@ interface Props {
   variant: ThemeVariant;
   options: Option[];
   selectLabel?: string;
-}
+};
 
 const props = withDefaults(defineProps<Props>(), {
   selectLabel: 'Select'
