@@ -1,10 +1,10 @@
 <template>
   <button
+    ref="element"
     type="button"
     class="bk-tab block text-center rounded-sm hover min-w-16 w-28 p-3"
     :class="[resolveVariant(variant), { 'is-selected': isSelected }]"
     part="bk-tab"
-    ref="element"
     :aria-controls="controls"
     :aria-selected="isSelected"
     role="tab"
@@ -18,12 +18,12 @@ import { resolveVariant } from 'baks-components-styles';
 import type { ThemeVariant } from 'baks-components-styles';
 import { ref, watch } from 'vue';
 
-interface Props {
+type Props = {
   variant: ThemeVariant;
   tabGroup: string;
   selected?: boolean;
   controls: string;
-}
+};
 
 const props = withDefaults(defineProps<Props>(), {
   selected: false

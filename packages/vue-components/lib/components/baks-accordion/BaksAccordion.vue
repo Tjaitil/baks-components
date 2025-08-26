@@ -48,10 +48,10 @@
 import { type ThemeVariant, resolveVariant } from 'baks-components-styles';
 import ChevronDown from '../Icons/ChevronDown.vue';
 import { ref, useId } from 'vue';
-interface Props {
+type Props = {
   variant: ThemeVariant;
   isExpanded?: string;
-}
+};
 
 const props = defineProps<Props>();
 
