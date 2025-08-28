@@ -1,37 +1,31 @@
 import { defineCustomElement } from 'vue';
-import { BaksButton } from './components/baks-button/BaksButton'
+
 import './app.css';
 import { registerComponent } from './utilities/registerComponent';
 import BaksCardCe from './components/baks-card/BaksCard.ce.vue';
-import BaksAccordion from 'baks-components-vue/lib/components/baks-accordion/BaksAccordion.vue';
-import BaksTab from 'baks-components-vue/lib/components/baks-tabs/BaksTab.vue';
-import BaksTabPanel from 'baks-components-vue/lib/components/baks-tabs/BaksTabPanel.vue';
-import BaksTabList from './components/baks-tabs/BaksTabsList.ce.vue';
+import BaksAccordionCe from 'baks-components-vue/lib/components/baks-accordion/BaksAccordion.vue';
+import BaksTabCe from 'baks-components-vue/lib/components/baks-tabs/BaksTab.vue';
+import BaksTabPanelCe from 'baks-components-vue/lib/components/baks-tabs/BaksTabPanel.vue';
+import BaksTabListCe from './components/baks-tabs/BaksTabsList.ce.vue';
 import css from './app.css?inline';
+import { BaksButton } from './components/baks-button/BaksButton';
 export type { ThemeVariant as ThemeVariants } from 'baks-components-styles';
 
 const BaksCard = defineCustomElement(BaksCardCe, {
-  'styles': [css]
+  styles: [css]
 });
-const BaksAccordionCE = defineCustomElement(BaksAccordion, {
-  'styles': [css
-  ] 
+const BaksAccordion = defineCustomElement(BaksAccordionCe, {
+  styles: [css]
 });
-const BaksTabCE = defineCustomElement(BaksTab, {
-  'styles': [css]
+const BaksTab = defineCustomElement(BaksTabCe, {
+  styles: [css]
 });
-const BaksTabListW = defineCustomElement(BaksTabList);
-const BaksTabPanelCe = defineCustomElement(BaksTabPanel, {
-  'styles': [css]});
+const BaksTabList = defineCustomElement(BaksTabListCe);
+const BaksTabPanel = defineCustomElement(BaksTabPanelCe, {
+  styles: [css]
+});
 
-export {
-  BaksCard,
-  BaksButton,
-  BaksAccordion,
-  BaksTabCE as BaksTab,
-  BaksTabListW as BaksTabList,
-  BaksTabPanelCe as BaksTabPanel
-};
+export { BaksCard, BaksAccordion, BaksTab, BaksTabList, BaksTabPanel };
 
 export type Components =
   | 'BaksButton'
@@ -44,10 +38,11 @@ export type Components =
 export function register(specificComponents: Components[] = []) {
   if (specificComponents.length === 0) {
     registerComponent('baks-card', BaksCard);
-    registerComponent('baks-accordion', BaksAccordionCE);
-    registerComponent('baks-tab', BaksTabCE);
-    registerComponent('baks-tab-panel', BaksTabPanelCe);
-    registerComponent('baks-tab-list', BaksTabListW);
+    registerComponent('baks-accordion', BaksAccordion);
+    registerComponent('baks-tab', BaksTab);
+    registerComponent('baks-tab-panel', BaksTabPanel);
+    registerComponent('baks-tab-list', BaksTabList);
+    registerComponent('baks-button', BaksButton);
   } else {
     specificComponents.forEach((component) => {
       switch (component) {
@@ -55,29 +50,21 @@ export function register(specificComponents: Components[] = []) {
           registerComponent('baks-card', BaksCard);
           break;
         case 'BaksAccordion':
-          registerComponent('baks-accordion', BaksAccordionCE);
+          registerComponent('baks-accordion', BaksAccordion);
           break;
         case 'BaksTab':
-          registerComponent('baks-tab', BaksTabCE);
+          registerComponent('baks-tab', BaksTab);
           break;
         case 'BaksTabPanel':
-          registerComponent('baks-tab-panel', BaksTabPanelCe);
+          registerComponent('baks-tab-panel', BaksTabPanel);
           break;
         case 'BaksTabList':
-          registerComponent('baks-tab-list', BaksTabListW);
+          registerComponent('baks-tab-list', BaksTabList);
+          break;
+        case 'BaksButton':
+          registerComponent('baks-button', BaksButton);
           break;
       }
     });
-  }
-}
-
-declare module 'vue' {
-  export interface GlobalComponents {
-    BaksButton: typeof BaksButton;
-    BaksCard: typeof BaksCard;
-    BaksAccordion: typeof BaksAccordion;
-    BaksTab: typeof BaksTab;
-    BaksTabPanel: typeof BaksTabPanel;
-    BaksTabList: typeof BaksTabListW;
   }
 }

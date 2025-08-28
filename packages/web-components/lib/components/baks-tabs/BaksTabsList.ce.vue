@@ -2,19 +2,20 @@
   <div
     class="bk-tabs-list-w"
     ref="tabsWrapper"
-    part="bk-tabs-list-w" :class="direction"
+    part="bk-tabs-list-w"
+    :class="direction"
     role="tablist"
-    >
-      <slot></slot>
+  >
+    <slot></slot>
   </div>
 </template>
 
 <script setup lang="ts">
 import { getCurrentInstance, onMounted, ref, watch } from 'vue';
 
-interface Props {
+type Props = {
   direction?: 'horizontal' | 'vertical';
-}
+};
 
 const props = withDefaults(defineProps<Props>(), {
   direction: 'horizontal'
@@ -60,12 +61,12 @@ onMounted(() => {
       tab.classList.add('special');
       if (tabs.value.length - 1 === index) {
         tab.classList.add('last');
-      } else if(index === 0) {
+      } else if (index === 0) {
         tab.classList.add('first');
       }
     }
 
-    const tabPanelIdentifier = tab.attributes.getNamedItem("controls").value;
+    const tabPanelIdentifier = tab.attributes.getNamedItem('controls').value;
     const element = <HTMLElement>document.querySelectorAll(`#${tabPanelIdentifier}`)[0];
 
     if (element !== undefined) {
@@ -77,12 +78,12 @@ onMounted(() => {
     }
 
     tab.addEventListener('click', (e) => {
-      tabs.value.forEach(element => {
-        if(element !== e.target) {
+      tabs.value.forEach((element) => {
+        if (element !== e.target) {
           element.removeAttribute('selected');
         } else {
           element.setAttribute('selected', '');
-        } 
+        }
       });
       setVisibleTabPanel(tabPanelIdentifier);
     });

@@ -11,10 +11,10 @@
 <script setup lang="ts">
 import { type ThemeVariant, resolveVariant } from 'baks-components-styles';
 
-interface Props {
+type Props = {
   variant: ThemeVariant;
-}
-const props = defineProps<Props>();
+};
+defineProps<Props>();
 </script>
 
 <style>
