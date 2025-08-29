@@ -1,16 +1,38 @@
 {
-    "compilerOptions": {
-      "target": "ESNext",
-      "moduleResolution": "Node",
-      "outDir": "dist",
-      "declaration": true,
-      "emitDeclarationOnly": true,
-      "downlevelIteration": true,
-      "experimentalDecorators": true,
-      "useDefineForClassFields": false,  
-      "paths": {
-        "@/*": ["./lib/*"]
-      }
-    },
-    "include": ["lib/**/*", "lib/**/*.vue", "lib/**/*.ce.vue", "env.d.ts", "css.d.ts"]
-  }
+  "extends": "@vue/tsconfig/tsconfig.lib.json",
+  "compilerOptions": {
+    "module": "es2022",
+    "target": "es2023",
+    "moduleResolution": "bundler",
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "downlevelIteration": true,
+    "useDefineForClassFields": false,
+    "allowImportingTsExtensions": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "declarationMap": false,
+    "sourceMap": false,
+    "jsx": "preserve",
+    "paths": {
+      "@/*": [
+        "./lib/*"
+      ]
+    }
+  },
+  "include": [
+    "lib/**/*",
+    "lib/**/*.vue",
+    "lib/**/*.ce.vue",
+    "env.d.ts",
+    "css.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "tests",
+    "storybook-static",
+    "**/*.stories.ts",
+    "**/*.test.ts"
+  ]
+}

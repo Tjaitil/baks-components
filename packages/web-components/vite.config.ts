@@ -7,37 +7,37 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
 
-export default mergeConfig(rootConfig, defineConfig({
-  define: {
-    'process.env': {}
-  },
-  plugins: [
-    tailwindcss(),
-    vue({
-      customElement: true
-    })
-  ],
-  resolve: {
-    alias: {
-      '@/': fileURLToPath(new URL('./', import.meta.url))
-    }
-  },
-  build: {
-    copyPublicDir: false,
-    lib: {
-      entry: resolve('lib/index.ts'),
-      formats: ['es']
+export default mergeConfig(
+  rootConfig,
+  defineConfig({
+    plugins: [
+      tailwindcss(),
+      vue({
+        customElement: true
+      })
+    ],
+    resolve: {
+      alias: {
+        '@/': fileURLToPath(new URL('./', import.meta.url))
+      }
     },
-    rollupOptions: {
-      external: ['vue'],
-      output: {
-        globals: {
-          vue: 'Vue'
-        },
-        entryFileNames(chunkInfo) {
-          return `${chunkInfo.name}.js`;
+    build: {
+      copyPublicDir: false,
+      lib: {
+        entry: resolve('lib/index.ts'),
+        formats: ['es']
+      },
+      rollupOptions: {
+        external: ['vue'],
+        output: {
+          globals: {
+            vue: 'Vue'
+          },
+          entryFileNames(chunkInfo) {
+            return `${chunkInfo.name}.js`;
+          }
         }
       }
     }
-  }
-}));
+  })
+);

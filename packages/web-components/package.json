@@ -6,7 +6,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "lib/vue-types.d.ts",
+    "lib/html-types.d.ts"
   ],
   "author": "Kjetil Baksaas",
   "license": "MIT",
@@ -18,12 +20,14 @@
   "exports": {
     "./components/baks-button": "./dist/components/baks-button/BaksButton.js",
     ".": "./dist/index.js",
+    "./vue-types": "./lib/vue-types.d.ts",
+    "./html-types": "./lib/html-types.d.ts",
     "./style.css": "./dist/index.css",
     "./themes/default.css": "./dist/themes/default.css"
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run build-only",
+    "build": "npm run build-only && npm run types",
     "preview": "vite preview",
     "build-only": "vite build",
     "types": "vue-tsc -p tsconfig.build.json",

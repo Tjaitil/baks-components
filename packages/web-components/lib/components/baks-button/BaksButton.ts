@@ -1,9 +1,9 @@
 import { html, LitElement, unsafeCSS } from 'lit';
 import style from 'baks-components-styles/src/css/baks-button.css?inline';
 import variant from 'baks-components-styles/src/css/variant.css?inline';
-import { customElement, property } from 'lit/decorators.js';
+import { ThemeVariant } from 'baks-components-styles';
+import { property } from 'lit/decorators.js';
 
-@customElement('baks-button')
 export class BaksButton extends LitElement {
   static styles = unsafeCSS(style + variant);
   static formAssociated = true;
@@ -30,7 +30,7 @@ export class BaksButton extends LitElement {
   }
 
   @property({ type: String })
-  variant = 'primary';
+  variant: ThemeVariant;
 
   get _variantClassName() {
     return `bk-${this.variant}`;
