@@ -14,7 +14,7 @@
     "vitest/globals"
   ],
   "include": [
-    "lib/**/*.ts",
+    "lib/**/*",
     "lib/**/*.vue",
     "src/**/*",
     "vitest.config.ts",
