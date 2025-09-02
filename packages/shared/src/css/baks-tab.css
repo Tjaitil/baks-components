@@ -1,8 +1,15 @@
 @reference 'tailwindcss';
+
+.bk-tabs {
+  &.vertical {
+    flex-direction: row;
+    display: flex;
+  }
+}
 .bk-tab {
-  @apply min-w-16;
-  @apply w-28;
   @apply p-3;
+  width: auto;
+  cursor: pointer;
 }
 .bk-tab.horizontal.special {
   :not(.first) {
@@ -18,5 +25,15 @@
   }
   :not(.last) {
     border-bottom: none;
+  }
+}
+
+.bk-tablist {
+  display: flex;
+  &.horizontal {
+    flex-direction: row;
+  }
+  &.vertical {
+    flex-direction: column;
   }
 }

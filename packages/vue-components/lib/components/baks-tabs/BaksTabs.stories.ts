@@ -1,11 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/vue3-vite';
+import type { Meta, StoryObj } from '@storybook/vue3';
+import { ref } from 'vue';
 
-import BaksTab from './BaksTab.vue';
-import BaksTabPanel from './BaksTabPanel.vue';
-import { useBaksTabs } from '../../composables/useBaksTabs';
+import BaksTabs from './BaksTabs.vue';
+import type { BaksTabItem } from '../../types/BaksTabItem';
 
 const meta = {
-  component: BaksTab,
+  //@ts-ignore
+  component: BaksTabs,
   title: 'BaksTabs',
   argTypes: {
     variant: {
@@ -13,248 +14,276 @@ const meta = {
       options: ['primary', 'secondary', 'dark', 'light', 'warning', 'success', 'error', 'info'],
       defaultValue: 'primary'
     },
-    default: {
-      control: { type: 'text' },
-      description: 'Default slot content for the tab'
+    direction: {
+      control: { type: 'select' },
+      options: ['horizontal', 'vertical'],
+      defaultValue: 'horizontal'
+    },
+    items: {
+      control: { type: 'object' },
+      description: 'Array of tab items with label and key properties'
     }
   },
   args: {
-    variant: 'primary'
+    variant: 'primary',
+    direction: 'horizontal'
   }
-} satisfies Meta<typeof BaksTab>;
+} satisfies Meta<typeof BaksTabs>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 export const TabsWithPanels: Story = {
+  // @ts-ignore
   render: (args) => ({
-    components: { BaksTab, BaksTabPanel },
+    components: { BaksTabs },
     setup() {
-      const tabs = ['tab1', 'tab2', 'tab3'] as const;
-      const { selectedTab, handleTabClick, isTabSelected } = useBaksTabs(tabs, 'tab1');
+      const items: BaksTabItem[] = [
+        { label: 'First Tab', key: 'tab1' },
+        { label: 'Second Tab', key: 'tab2' },
+        { label: 'Third Tab', key: 'tab3' }
+      ];
+
+      const selectedTab = ref<string>('tab2');
 
       return {
         args,
-        selectedTab,
-        handleTabClick,
-        isTabSelected
+        items,
+        selectedTab
       };
     },
     template: `
-      <div>
-        <div class="flex gap-2 mb-4" role="tablist">
-          <BaksTab 
-            v-bind="args"
-            tabGroup="demo"
-            controls="panel-1"
-            :selected="isTabSelected('tab1')"
-            @click="handleTabClick('tab1')"
-          >
-            First Tab
-          </BaksTab>
-          
-          <BaksTab 
-            v-bind="args"
-            tabGroup="demo"
-            controls="panel-2"
-            :selected="isTabSelected('tab2')"
-            @click="handleTabClick('tab2')"
-          >
-            Second Tab
-          </BaksTab>
-          
-          <BaksTab 
-            v-bind="args"
-            tabGroup="demo"
-            controls="panel-3"
-            :selected="isTabSelected('tab3')"
-            @click="handleTabClick('tab3')"
-          >
-            Third Tab
-          </BaksTab>
-        </div>
+      <BaksTabs v-bind="args" :items="items" v-model="selectedTab">
+        <template #tab1>
+          <h3>Content for First Tab</h3>
+          <p>This is the content that shows when the first tab is selected.</p>
+        </template>
         
-        <div>
-          <BaksTabPanel 
-            id="panel-1" 
-            controlledBy="tab1" 
-            :isVisible="isTabSelected('tab1')"
-          >
-            <h3>Content for First Tab</h3>
-            <p>This is the content that shows when the first tab is selected.</p>
-          </BaksTabPanel>
-          
-          <BaksTabPanel 
-            id="panel-2" 
-            controlledBy="tab2" 
-            :isVisible="isTabSelected('tab2')"
-          >
-            <h3>Content for Second Tab</h3>
-            <p>This is the content that shows when the second tab is selected.</p>
-            <ul>
-              <li>Item 1</li>
-              <li>Item 2</li>
-              <li>Item 3</li>
-            </ul>
-          </BaksTabPanel>
-          
-          <BaksTabPanel 
-            id="panel-3" 
-            controlledBy="tab3" 
-            :isVisible="isTabSelected('tab3')"
-          >
-            <h3>Content for Third Tab</h3>
-            <p>This is the content that shows when the third tab is selected.</p>
-            <div class="bg-gray-100 p-4 rounded">
-              <p>Some highlighted content in the third panel.</p>
-            </div>
-          </BaksTabPanel>
-        </div>
-      </div>
+        <template #tab2>
+          <h3>Content for Second Tab</h3>
+          <p>This is the content that shows when the second tab is selected.</p>
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+        </template>
+        
+        <template #tab3>
+          <h3>Content for Third Tab</h3>
+          <p>This is the content that shows when the third tab is selected.</p>
+          <div class="bg-gray-100 p-4 rounded">
+            <p>Some highlighted content in the third panel.</p>
+          </div>
+        </template>
+      </BaksTabs>
     `
   }),
   args: {
     variant: 'primary',
-    tabGroup: 'demo',
-    controls: 'panel-1'
+    direction: 'horizontal',
+    items: [
+      { label: 'First Tab', key: 'tab1' },
+      { label: 'Second Tab', key: 'tab2' },
+      { label: 'Third Tab', key: 'tab3' }
+    ]
+  }
+};
+
+export const TabWithIcon: Story = {
+  // @ts-ignore
+  render: (args) => ({
+    components: { BaksTabs },
+    setup() {
+      const items: BaksTabItem[] = [
+        { label: 'Home', key: 'home' },
+        { label: 'Settings', key: 'settings' },
+        { label: 'Profile', key: 'profile' }
+      ];
+
+      const selectedTab = ref<string>('home');
+
+      return {
+        args,
+        items,
+        selectedTab
+      };
+    },
+    template: `
+      <BaksTabs v-bind="args" :items="items" v-model="selectedTab">
+        <template #tabs="{ item }">
+          <span>🏠</span> {{ item.label }}
+        </template>
+        
+        <template #home>
+          <h3>Home Content</h3>
+          <p>Welcome to the home page!</p>
+        </template>
+        
+        <template #settings>
+          <h3>Settings Content</h3>
+          <p>Configure your preferences here.</p>
+        </template>
+        
+        <template #profile>
+          <h3>Profile Content</h3>
+          <p>Manage your profile information.</p>
+        </template>
+      </BaksTabs>
+    `
+  }),
+  args: {
+    variant: 'primary',
+    direction: 'horizontal',
+    items: [
+      { label: 'Home', key: 'home' },
+      { label: 'Settings', key: 'settings' },
+      { label: 'Profile', key: 'profile' }
+    ]
   }
 };
 
 export const DifferentVariants: Story = {
+  // @ts-ignore
   render: () => ({
-    components: { BaksTab, BaksTabPanel },
+    components: { BaksTabs },
     setup() {
-      const tabs = ['primary', 'secondary', 'success'] as const;
-      const { selectedTab, handleTabClick, isTabSelected } = useBaksTabs(tabs, 'primary');
+      const primaryItems: BaksTabItem[] = [
+        { label: 'Primary Tab 1', key: 'primary1' },
+        { label: 'Primary Tab 2', key: 'primary2' }
+      ];
+
+      const secondaryItems: BaksTabItem[] = [
+        { label: 'Secondary Tab 1', key: 'secondary1' },
+        { label: 'Secondary Tab 2', key: 'secondary2' }
+      ];
+
+      const successItems: BaksTabItem[] = [
+        { label: 'Success Tab 1', key: 'success1' },
+        { label: 'Success Tab 2', key: 'success2' }
+      ];
+
+      const primarySelected = ref<string>('primary1');
+      const secondarySelected = ref<string>('secondary1');
+      const successSelected = ref<string>('success1');
 
       return {
-        selectedTab,
-        handleTabClick,
-        isTabSelected
+        primaryItems,
+        secondaryItems,
+        successItems,
+        primarySelected,
+        secondarySelected,
+        successSelected
       };
     },
     template: `
-      <div>
-        <div class="flex gap-2 mb-4" role="tablist">
-          <BaksTab 
-            variant="primary"
-            tabGroup="variants"
-            controls="primary-panel"
-            :selected="isTabSelected('primary')"
-            @click="handleTabClick('primary')"
-          >
-            Primary
-          </BaksTab>
-          
-          <BaksTab 
-            variant="secondary"
-            tabGroup="variants"
-            controls="secondary-panel"
-            :selected="isTabSelected('secondary')"
-            @click="handleTabClick('secondary')"
-          >
-            Secondary
-          </BaksTab>
-          
-          <BaksTab 
-            variant="success"
-            tabGroup="variants"
-            controls="success-panel"
-            :selected="isTabSelected('success')"
-            @click="handleTabClick('success')"
-          >
-            Success
-          </BaksTab>
+      <div class="space-y-8">
+        <div>
+          <h3 class="mb-4">Primary Variant</h3>
+          <BaksTabs variant="primary" :items="primaryItems" v-model="primarySelected">
+            <template #primary1>
+              <p>This tab uses the primary variant styling.</p>
+            </template>
+            <template #primary2>
+              <p>Another primary tab content.</p>
+            </template>
+          </BaksTabs>
         </div>
         
         <div>
-          <BaksTabPanel 
-            id="primary-panel" 
-            controlledBy="primary" 
-            :isVisible="isTabSelected('primary')"
-          >
-            <h3>Primary Tab Content</h3>
-            <p>This tab uses the primary variant styling.</p>
-          </BaksTabPanel>
-          
-          <BaksTabPanel 
-            id="secondary-panel" 
-            controlledBy="secondary" 
-            :isVisible="isTabSelected('secondary')"
-          >
-            <h3>Secondary Tab Content</h3>
-            <p>This tab uses the secondary variant styling.</p>
-          </BaksTabPanel>
-          
-          <BaksTabPanel 
-            id="success-panel" 
-            controlledBy="success" 
-            :isVisible="isTabSelected('success')"
-          >
-            <h3>Success Tab Content</h3>
-            <p>This tab uses the success variant styling.</p>
-          </BaksTabPanel>
+          <h3 class="mb-4">Secondary Variant</h3>
+          <BaksTabs variant="secondary" :items="secondaryItems" v-model="secondarySelected">
+            <template #secondary1>
+              <p>This tab uses the secondary variant styling.</p>
+            </template>
+            <template #secondary2>
+              <p>Another secondary tab content.</p>
+            </template>
+          </BaksTabs>
+        </div>
+        
+        <div>
+          <h3 class="mb-4">Success Variant</h3>
+          <BaksTabs variant="success" :items="successItems" v-model="successSelected">
+            <template #success1>
+              <p>This tab uses the success variant styling.</p>
+            </template>
+            <template #success2>
+              <p>Another success tab content.</p>
+            </template>
+          </BaksTabs>
         </div>
       </div>
     `
   }),
+  // @ts-ignore
   args: {
     variant: 'primary',
-    tabGroup: 'variants',
-    controls: 'primary-panel'
+    direction: 'horizontal'
   }
 };
 
 export const ManyTabs: Story = {
+  // @ts-ignore
   render: (args) => ({
-    components: { BaksTab, BaksTabPanel },
+    components: { BaksTabs },
     setup() {
-      const tabs = ['tab1', 'tab2', 'tab3', 'tab4', 'tab5', 'tab6'] as const;
-      const { selectedTab, handleTabClick, isTabSelected } = useBaksTabs(tabs, 'tab1');
+      const items: BaksTabItem[] = Array.from({ length: 6 }, (_, i) => ({
+        label: `Tab ${i + 1}`,
+        key: `tab${i + 1}`
+      }));
+
+      const selectedTab = ref<string>('tab1');
 
       return {
         args,
-        selectedTab,
-        handleTabClick,
-        isTabSelected,
-        tabs
+        items,
+        selectedTab
       };
     },
     template: `
-      <div>
-        <div class="flex gap-1 mb-4 overflow-x-auto" role="tablist">
-          <BaksTab 
-            v-for="(tab, index) in tabs"
-            :key="tab"
-            v-bind="args"
-            tabGroup="many"
-            :controls="'panel-' + tab"
-            :selected="isTabSelected(tab)"
-            @click="handleTabClick(tab)"
-          >
-            Tab {{ index + 1 }}
-          </BaksTab>
-        </div>
-        
-        <div>
-          <BaksTabPanel 
-            v-for="(tab, index) in tabs"
-            :key="tab"
-            :id="'panel-' + tab" 
-            :controlledBy="tab" 
-            :isVisible="isTabSelected(tab)"
-          >
-            <h3>Tab {{ index + 1 }} Content</h3>
-            <p>This is the content for tab {{ index + 1 }}.</p>
-          </BaksTabPanel>
-        </div>
+      <div class="overflow-x-auto">
+        <BaksTabs v-bind="args" :items="items" v-model="selectedTab">
+          <template #tab1>
+            <h3>Tab 1 Content</h3>
+            <p>This is the content for tab 1.</p>
+          </template>
+          
+          <template #tab2>
+            <h3>Tab 2 Content</h3>
+            <p>This is the content for tab 2.</p>
+          </template>
+          
+          <template #tab3>
+            <h3>Tab 3 Content</h3>
+            <p>This is the content for tab 3.</p>
+          </template>
+          
+          <template #tab4>
+            <h3>Tab 4 Content</h3>
+            <p>This is the content for tab 4.</p>
+          </template>
+          
+          <template #tab5>
+            <h3>Tab 5 Content</h3>
+            <p>This is the content for tab 5.</p>
+          </template>
+          
+          <template #tab6>
+            <h3>Tab 6 Content</h3>
+            <p>This is the content for tab 6.</p>
+          </template>
+        </BaksTabs>
       </div>
     `
   }),
   args: {
     variant: 'info',
-    tabGroup: 'many',
-    controls: 'panel-tab1'
+    direction: 'horizontal',
+    items: Array.from({ length: 6 }, (_, i) => ({
+      label: `Tab ${i + 1}`,
+      key: `tab${i + 1}`
+    }))
   }
 };

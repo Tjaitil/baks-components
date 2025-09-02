@@ -8,7 +8,9 @@
     :aria-controls="controls"
     :aria-selected="isSelected"
     role="tab"
+    @click="emit('click')"
   >
+    <slot name="icon"></slot>
     <slot></slot>
   </button>
 </template>
@@ -19,8 +21,8 @@ import type { ThemeVariant } from 'baks-components-styles';
 import { ref, watch } from 'vue';
 
 type Props = {
+  id: string;
   variant: ThemeVariant;
-  tabGroup: string;
   selected?: boolean;
   controls: string;
 };
@@ -39,6 +41,9 @@ watch(
 );
 
 const element = ref<HTMLElement | null>(null);
+const emit = defineEmits<{
+  click: [];
+}>();
 </script>
 
 <style>
