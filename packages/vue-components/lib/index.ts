@@ -5,6 +5,7 @@ import BaksTabPanel from './components/baks-tabs/BaksTabPanel.vue';
 import BaksCard from './components/baks-card/BaksCard.vue';
 import BaksSelect from './components/baks-select/BaksSelect.vue';
 import './app.css';
+export type { BaksTabItem } from './types/BaksTabItem';
 export type { ThemeVariant as ThemeVariants } from 'baks-components-styles';
 
 export { BaksButton, BaksAccordion, BaksTab, BaksTabPanel, BaksCard, BaksSelect };
