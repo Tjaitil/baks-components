@@ -12,17 +12,17 @@ import { BaksButton } from './components/baks-button/BaksButton';
 export type { ThemeVariant as ThemeVariants } from 'baks-components-styles';
 
 const BaksCard = defineCustomElement(BaksCardCe, {
-  styles: [css]
+  styles: [css, ...(BaksCardCe?.styles ?? [])]
 });
 const BaksAccordion = defineCustomElement(BaksAccordionCe, {
-  styles: [css]
+  styles: [css, ...(BaksAccordionCe?.styles ?? [])]
 });
 const BaksTab = defineCustomElement(BaksTabCe, {
-  styles: [css]
+  styles: [css, ...(BaksTabCe?.styles ?? [])]
 });
 const BaksTabList = defineCustomElement(BaksTabListCe);
 const BaksTabPanel = defineCustomElement(BaksTabPanelCe, {
-  styles: [css]
+  styles: [css, ...(BaksTabPanelCe?.styles ?? [])]
 });
 
 export { BaksCard, BaksAccordion, BaksTab, BaksTabList, BaksTabPanel };
