@@ -1,11 +1,5 @@
 @reference 'tailwindcss';
 
-.bk-tabs {
-  &.vertical {
-    flex-direction: row;
-    display: flex;
-  }
-}
 .bk-tab {
   @apply p-3;
   width: auto;
@@ -25,15 +19,5 @@
   }
   :not(.last) {
     border-bottom: none;
-  }
-}
-
-.bk-tablist {
-  display: flex;
-  &.horizontal {
-    flex-direction: row;
-  }
-  &.vertical {
-    flex-direction: column;
   }
 }
