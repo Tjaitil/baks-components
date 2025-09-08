@@ -1,8 +1,9 @@
 @reference 'tailwindcss';
+
 .bk-tab {
-  @apply min-w-16;
-  @apply w-28;
   @apply p-3;
+  width: auto;
+  cursor: pointer;
 }
 .bk-tab.horizontal.special {
   :not(.first) {

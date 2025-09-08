@@ -42,6 +42,7 @@
     "baks-components-styles": "^0.6.0",
     "glob": "^10.3.12",
     "tailwindcss": "^4.1.11",
+    "uuid": "^11.1.0",
     "vue": "^3.4.26"
   },
   "devDependencies": {

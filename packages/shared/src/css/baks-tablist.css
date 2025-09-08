@@ -1,0 +1,15 @@
+.bk-tabs {
+  &.vertical {
+    flex-direction: row;
+    display: flex;
+  }
+}
+.bk-tablist {
+  display: flex;
+  &.horizontal {
+    flex-direction: row;
+  }
+  &.vertical {
+    flex-direction: column;
+  }
+}

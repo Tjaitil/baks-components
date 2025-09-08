@@ -6,7 +6,7 @@ import BaksCardCe from './components/baks-card/BaksCard.ce.vue';
 import BaksAccordionCe from 'baks-components-vue/lib/components/baks-accordion/BaksAccordion.vue';
 import BaksTabCe from 'baks-components-vue/lib/components/baks-tabs/BaksTab.vue';
 import BaksTabPanelCe from 'baks-components-vue/lib/components/baks-tabs/BaksTabPanel.vue';
-import BaksTabListCe from './components/baks-tabs/BaksTabsList.ce.vue';
+import BaksTabsCe from './components/baks-tabs/BaksTabs.vue';
 import css from './app.css?inline';
 import { BaksButton } from './components/baks-button/BaksButton';
 export type { ThemeVariant as ThemeVariants } from 'baks-components-styles';
@@ -20,19 +20,19 @@ const BaksAccordion = defineCustomElement(BaksAccordionCe, {
 const BaksTab = defineCustomElement(BaksTabCe, {
   styles: [css, ...(BaksTabCe?.styles ?? [])]
 });
-const BaksTabList = defineCustomElement(BaksTabListCe);
+const BaksTabs = defineCustomElement(BaksTabsCe, {});
 const BaksTabPanel = defineCustomElement(BaksTabPanelCe, {
   styles: [css, ...(BaksTabPanelCe?.styles ?? [])]
 });
 
-export { BaksCard, BaksAccordion, BaksTab, BaksTabList, BaksTabPanel };
+export { BaksCard, BaksAccordion, BaksTab, BaksTabs, BaksTabPanel };
 
 export type Components =
   | 'BaksButton'
   | 'BaksCard'
   | 'BaksAccordion'
   | 'BaksTab'
-  | 'BaksTabList'
+  | 'BaksTabs'
   | 'BaksTabPanel';
 
 export function register(specificComponents: Components[] = []) {
@@ -41,7 +41,7 @@ export function register(specificComponents: Components[] = []) {
     registerComponent('baks-accordion', BaksAccordion);
     registerComponent('baks-tab', BaksTab);
     registerComponent('baks-tab-panel', BaksTabPanel);
-    registerComponent('baks-tab-list', BaksTabList);
+    registerComponent('baks-tabs', BaksTabs);
     registerComponent('baks-button', BaksButton);
   } else {
     specificComponents.forEach((component) => {
@@ -58,8 +58,8 @@ export function register(specificComponents: Components[] = []) {
         case 'BaksTabPanel':
           registerComponent('baks-tab-panel', BaksTabPanel);
           break;
-        case 'BaksTabList':
-          registerComponent('baks-tab-list', BaksTabList);
+        case 'BaksTabs':
+          registerComponent('baks-tabs', BaksTabs);
           break;
         case 'BaksButton':
           registerComponent('baks-button', BaksButton);
