@@ -56,7 +56,9 @@ const tabGroupId = `'tab-group-${useId()}`;
 const tabIds = items.map((item) => `tab-${item.label}`);
 const tabPanelIds = items.map((item) => `tabpanel-${item.label}`);
 
-const index = ref(tabPanelIds.findIndex((id, idx) => items[idx].key === modelValue.value));
+const currentfocusIndex = ref(
+  tabPanelIds.findIndex((id, idx) => items[idx].key === modelValue.value)
+);
 
 const handleKeydown = (event: KeyboardEvent) => {
   let newIndex = null;
@@ -66,8 +68,7 @@ const handleKeydown = (event: KeyboardEvent) => {
     (child) => child === document.activeElement
   );
 
-  // Use the currently focused tab index, fallback to stored index
-  const currentIndex = currentFocusedIndex !== -1 ? currentFocusedIndex : index.value;
+  const currentIndex = currentFocusedIndex !== -1 ? currentFocusedIndex : currentfocusIndex.value;
 
   if (event.key === 'Enter') {
     event.preventDefault();
@@ -107,10 +108,8 @@ const handleKeydown = (event: KeyboardEvent) => {
     return;
   }
 
-  console.log('Current index:', currentIndex, 'New index:', newIndex);
-
-  index.value = newIndex;
-  focusElement(tabListElement.value, index.value);
+  currentfocusIndex.value = newIndex;
+  focusElement(tabListElement.value, currentfocusIndex.value);
 };
 
 const focusElement = (
@@ -140,6 +139,9 @@ const focusElement = (
 defineSlots<
   {
     [key in T['key']]: () => VNode;
-  } & { ['tabs']: () => VNode } & { [key: string]: () => VNode }
+  } & { ['tabs']: () => VNode } & { [key: string]: () => BaksTabItem }
 >();
 </script>
+<style>
+@import '../../../../shared/src/css/baks-tablist.css';
+</style>
