@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.9.0...baks-components-vue@0.10.0) (2025-09-08)
+
+
+### Bug Fixes
+
+* fix broken url path ([#39](https://github.com/Tjaitil/baks-components/issues/39)) ([521c086](https://github.com/Tjaitil/baks-components/commit/521c08699c5357a10ae93f36857c83d02dd87a08))
+* missing export in index.ts ([2fc387f](https://github.com/Tjaitil/baks-components/commit/2fc387f360faa22dfe2c0c5e40ba7d23f0e6459d))
+
+
+* fix(BaksSelect)!: various ay11 issues, remove includeEmptyOption and missing export (#46) ([9425361](https://github.com/Tjaitil/baks-components/commit/94253617b2c70cf41870bd95257ff31ba24ce353)), closes [#46](https://github.com/Tjaitil/baks-components/issues/46)
+
+
+### Features
+
+* **baks-components-vue:** add [@source](https://github.com/source) to scan dist folder ([#40](https://github.com/Tjaitil/baks-components/issues/40)) ([713e24b](https://github.com/Tjaitil/baks-components/commit/713e24b0b8db48e0430ed5fcbe18bce500fc080b))
+* new BaksTabs component ([#51](https://github.com/Tjaitil/baks-components/issues/51)) ([2e9307c](https://github.com/Tjaitil/baks-components/commit/2e9307c3850ad1fad4cb229ee54ef2982ae08041))
+
+
+### BREAKING CHANGES
+
+* baks-tab-list is renamed to baks-tabs
+* BaksSelect includeEmptyOption prop is removed
+
+
+
+
+
 # [0.9.0](https://github.com/Tjaitil/baks-components/compare/baks-components-vue@0.8.2...baks-components-vue@0.9.0) (2025-03-12)
 
 

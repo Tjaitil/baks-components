@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/Tjaitil/baks-components/compare/baks-components-web@0.4.3...baks-components-web@0.5.0) (2025-09-08)
+
+
+### Bug Fixes
+
+* **baks-components-web:** <style> not being present in custom element ([#52](https://github.com/Tjaitil/baks-components/issues/52)) ([06327be](https://github.com/Tjaitil/baks-components/commit/06327be1dfdcc0f510d7a5f5ed86c00064ad08a0))
+
+
+### Features
+
+* **baks-components-web:** improve typings ([#50](https://github.com/Tjaitil/baks-components/issues/50)) ([9b3ef3e](https://github.com/Tjaitil/baks-components/commit/9b3ef3eed7da513e7263a347b59c2bc1257f6659))
+* new BaksTabs component ([#51](https://github.com/Tjaitil/baks-components/issues/51)) ([2e9307c](https://github.com/Tjaitil/baks-components/commit/2e9307c3850ad1fad4cb229ee54ef2982ae08041))
+
+
+### BREAKING CHANGES
+
+* baks-tab-list is renamed to baks-tabs
+
+
+
+
+
 ## [0.4.3](https://github.com/Tjaitil/baks-components/compare/baks-components-web@0.4.2...baks-components-web@0.4.3) (2025-03-12)
 
 **Note:** Version bump only for package baks-components-web

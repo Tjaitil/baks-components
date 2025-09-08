@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/Tjaitil/baks-components/compare/baks-components-styles@0.6.0...baks-components-styles@0.7.0) (2025-09-08)
+
+
+### Features
+
+* new BaksTabs component ([#51](https://github.com/Tjaitil/baks-components/issues/51)) ([2e9307c](https://github.com/Tjaitil/baks-components/commit/2e9307c3850ad1fad4cb229ee54ef2982ae08041))
+
+
+### BREAKING CHANGES
+
+* baks-tab-list is renamed to baks-tabs
+
+
+
+
+
 # [0.6.0](https://github.com/Tjaitil/baks-components/compare/baks-components-styles@0.5.2...baks-components-styles@0.6.0) (2025-03-12)
 
 
